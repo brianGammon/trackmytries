@@ -1,0 +1,67 @@
+<div flex layout="column">
+  <md-toolbar>
+    <h2 class="md-toolbar-tools"><span>{{category.category.name}} History</span></h2>
+  </md-toolbar>
+  <section flex layout="row" layout-xs="column">
+    <div flex class="chart">
+      <md-content layout="row" layout-align="center center" layout-fill class="md-whiteframe-z1">
+        <div flex layout layout-align="center center" ng-if="category.items.length < 2" class="no-chart-data">
+          <h1>Enter at least 2 tries to see a chart</h1>
+        </div>
+        <highchart flex ng-if="category.items.length >= 2" id="chart1" config="category.chartConfig"></highchart>
+      </md-content>
+    </div>
+    <div flex="33" flex-xs="100" class="stats">
+      <div class="cat-card">
+        <category-stats category="category.category" view-all="false" add-fn="category.showItemDialog(event, category.category)"></category-stats>
+      </div>
+    </div>
+  </section>
+  <section ng-if="category.items.length > 0" layout="column" layout-padding class="history">
+    <md-content class="md-whiteframe-z1">
+      <div layout="row">
+        <div flex="33" flex-gt-sm="20">
+          Date
+        </div>
+        <div ng-if="category.category.valueType === 'duration'" flex="33" flex-gt-sm="20">
+          HH:MM:SS
+        </div>
+        <div ng-if="category.category.valueType !== 'duration'" flex="33" flex-gt-sm="20">
+          Count
+        </div>
+        <div hide-xs hide-sm flex>
+          Notes
+        </div>
+        <div flex flex-gt-sm="20">
+          Actions
+        </div>
+      </div>
+    </md-content>
+    <div class="items md-whiteframe-z1" ng-repeat="item in category.items | orderBy:'-itemDateTime'">
+      <md-content>
+      <div layout="row">
+        <div flex="33" flex-gt-sm="20" layout layout-align="left center">
+          {{item.itemDateTime | date:'MM-dd-yyyy'}}
+        </div>
+        <div ng-if="category.category.valueType === 'duration'" flex="33" flex-gt-sm="20" layout layout-align="left center">
+          {{item.valueNumber * 1000 | date:'HH:mm:ss' : 'UTC' }}
+        </div>
+        <div ng-if="category.category.valueType !== 'duration'" flex="33" flex-gt-sm="20" layout layout-align="left center">
+          {{item.valueNumber || 0}}
+        </div>
+        <div hide-xs hide-sm flex layout layout-align="left center">
+          {{item.notes}}
+        </div>
+        <div flex flex-gt-sm="20" layout layout-align="left center">
+          <md-button class="md-icon-button" ng-click="category.showItemDialog($event, category.category, item)" aria-label="Edit">
+            <ng-md-icon icon="mode_edit"></ng-md-icon>
+          </md-button>
+          <md-button class="md-icon-button" ng-click="category.delete($event, item)" aria-label="Delete">
+            <ng-md-icon icon="delete"></ng-md-icon>
+          </md-button>
+        </div>
+      </div>
+      <md-content>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,62 @@
+<div class="userForm" layout="column" layout-align="center center" layout-fill>
+  <div layout="column" class="userFormContent md-whiteframe-z1">
+    <md-toolbar>
+      <h2 class="md-toolbar-tools"><span>Login</span></h2>
+    </md-toolbar>
+    <md-content ng-if="user.currentUser" layout="column" class="md-padding">
+      <div flex layout="row" class="signedInAlready">
+        <p>Logged in as: {{user.currentUser.name}}</p>
+        <md-button ng-click="user.logout()">Log Out</md-button>
+      </div>
+    </md-content>
+    <md-content ng-if="!user.currentUser" layout="column" class="md-padding">
+      <form
+        name="user.loginForm" novalidate>
+
+        <md-input-container class="md-block">
+          <label>Email</label>
+          <input required type="email" name="email" ng-model="user.credentials.email"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+          <div ng-messages="user.loginForm.email.$error">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Please enter a valid email address.
+            </div>
+          </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <input
+            ng-model="user.credentials.password"
+            name="password"
+            type="password"
+            required/>
+          <div ng-messages="user.loginForm.password.$error">
+            <div ng-message-exp="['required']">
+              Please enter your password.
+            </div>
+          </div>
+        </md-input-container>
+
+        <div layout="row" layout-align="center center">
+          <md-button type="submit" ng-click="user.login()" class="md-raised md-primary">Login</md-button>
+          <div flex></div>
+          <md-button href="" md-no-ink="md-no-ink">Forgot Password</md-button>
+        </div>
+      </form>
+    </md-content>
+  </div>
+
+  <md-content ng-if="!user.currentUser" layout="column" layout-margin class="userFormContent md-whiteframe-z1">
+    <div layout="column" layout-align="center center">
+      <p>Don't have an account yet? <a data-ui-sref="signup">Sign up here</a></p>
+      <div flex></div>
+      <md-button type="button" class="md-fab md-mini md-primary" data-ng-click="user.facebookLogin()">
+        <ng-md-icon icon="facebook"></ng-md-icon>
+      </md-button>
+    </div>
+  </md-content>
+
+
+</div>

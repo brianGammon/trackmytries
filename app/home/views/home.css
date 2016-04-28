@@ -1,0 +1,114 @@
+.fill-screen {
+    background-size: cover;
+    background-position: center;
+}
+
+.title-row {
+    position: relative;
+    min-height: 300px;
+}
+
+.title-row .title-block {
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    color: white;
+}
+
+.logo-wht {
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+  margin: 5px;
+}
+
+.logo-blk {
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+@media (max-width: 959px){
+  .title-block h1 {
+    font-size: 40px;
+  }
+
+  .title-block p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px){
+  .title-block h1 {
+    text-align: center;
+  }
+}
+
+.title {
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+p.md-title {
+  margin: 8px 0;
+}
+
+.down-button {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+@media (max-height: 350px){
+  .down-button {
+    bottom: -10px;
+  }
+}
+
+.fixed-attachment {
+    background-attachment: fixed;
+}
+@media (max-width: 1024px){
+    .fixed-attachment {
+        background-attachment: scroll;
+    }
+}
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.content-section {
+  background-color: white;
+  padding: 10px;
+}
+
+.content-section h2, p {
+  margin: 8px 0;
+}
+
+.about-tech img {
+  height: 75px;
+}
+
+ul.centered {
+  text-align: -webkit-center;
+  text-align: center;
+}
+
+ul.centered > li {
+  margin-left: 20px;
+}
+
+.prt-text {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: #468847;
+}

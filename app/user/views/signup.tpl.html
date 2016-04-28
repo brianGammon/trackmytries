@@ -1,0 +1,86 @@
+<div class="userForm" layout="column" layout-align="center center" layout-fill>
+  <div layout="column" class="userFormContent md-whiteframe-z1">
+    <md-toolbar>
+      <h2 class="md-toolbar-tools"><span>Sign Up</span></h2>
+    </md-toolbar>
+    <md-content ng-if="user.currentUser" layout="column" class="md-padding">
+      <div flex layout="row" class="signedInAlready">
+        <p>Logged in as: {{user.currentUser.name}}</p>
+        <md-button ng-click="user.logout()">Log Out</md-button>
+      </div>
+    </md-content>
+    <md-content ng-if="!user.currentUser" layout="column" class="md-padding">
+      <form
+        name="user.loginForm" novalidate>
+
+        <md-input-container class="md-block">
+          <label>Name</label>
+          <input required type="name" name="name" ng-model="user.credentials.name"
+               minlength="2" maxlength="100"/>
+
+          <div ng-messages="user.loginForm.name.$error">
+            <div ng-message-exp="['required', 'minlength', 'maxlength']">
+              Name is a required field.
+            </div>
+          </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+          <label>Email</label>
+          <input required type="email" name="email" ng-model="user.credentials.email"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+          <div ng-messages="user.loginForm.email.$error">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Please enter a valid email address.
+            </div>
+          </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <input
+            ng-model="user.credentials.password"
+            name="password"
+            type="password"
+            ng-pattern="/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/"
+            required/>
+          <div ng-messages="user.loginForm.password.$error">
+            <div ng-message-exp="['required','pattern']">
+              Password must be 8 or more characters long, and contain at least 1 uppercase and 1 number.
+            </div>
+          </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+          <label>Confirm Password</label>
+          <input
+            ng-model="user.credentials.confirmPassword"
+            name="confirmPassword"
+            type="password"
+            compare-to="user.credentials.password"
+            required/>
+          <div ng-messages="user.loginForm.confirmPassword.$error">
+            <div ng-message-exp="['required','compareTo']">
+              Required and must match the Password field.
+            </div>
+          </div>
+        </md-input-container>
+
+        <div layout="row" layout-align="center center">
+          <md-button type="submit" class="md-raised md-primary" ng-click="user.signUp()">Sign Up</md-button>
+        </div>
+      </form>
+    </md-content>
+  </div>
+
+  <md-content ng-if="!user.currentUser" layout="column" layout-margin class="userFormContent md-whiteframe-z1">
+    <div layout="column" layout-align="center center">
+      <p>Already have an account yet? <a data-ui-sref="login">Login here</a></p>
+      <div flex></div>
+      <md-button type="button" class="md-fab md-mini md-primary" data-ng-click="user.facebookLogin()">
+        <ng-md-icon icon="facebook"></ng-md-icon>
+      </md-button>
+    </div>
+  </md-content>
+</div>

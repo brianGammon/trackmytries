@@ -1,0 +1,55 @@
+.cat-card {
+  min-height: 360px;
+}
+
+.cat-card md-card-header {
+  background-color: #2196F3;
+  height: 60px;
+}
+
+.cat-card md-card-content {
+  padding-top: 0;
+}
+
+.goal-unmet {
+  background-color: rgba(255, 64, 129, 1);
+}
+
+.goal-met {
+  background-color: rgba(76, 175, 80, 1);
+}
+
+.total-tries {
+  background-color: rgba(158, 158, 158, 1);
+}
+
+.goal-row {
+  padding: 0 16px;
+  min-height: 40px;
+}
+
+.cat-card md-card-header-text, .cat-card .md-subhead {
+  color: white;
+}
+
+
+.stats-row {
+  padding: 8px;
+  border-bottom: 1px solid;
+}
+
+.items {
+  background-color: white;
+}
+
+.item-dialog {
+  min-width: 350px;
+}
+
+.chart {
+  margin: 8px;
+}
+
+.chart md-content {
+  min-height: 320px;
+}
