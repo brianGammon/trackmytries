@@ -15,10 +15,6 @@
   function Category($q, $firebaseArray, $firebaseObject, FirebaseRef) {
     var CategoryBase = {};
 
-    CategoryBase.getCategory = function (categoryId) {
-      return $firebaseObject(FirebaseRef.getCategoriesRef().child(categoryId));
-    };
-
     CategoryBase.getCategories = function () {
       return $firebaseArray(FirebaseRef.getCategoriesRef());
     };
@@ -28,7 +24,6 @@
     };
 
     CategoryBase.updateItem = function (categoryId, item) {
-      console.log(item);
       return FirebaseRef.getUserItemsRef().child(categoryId).child(item.$id).update({
         itemDateTime: item.itemDateTime.toJSON(),
         valueNumber: item.valueNumber,
@@ -38,6 +33,7 @@
 
     CategoryBase.addItem = function (categoryId, item) {
       return FirebaseRef.getUserItemsRef().child(categoryId).push({
+        '.priority': item.itemDateTime.toJSON(),
         itemDateTime: item.itemDateTime.toJSON(),
         valueNumber: item.valueNumber,
         notes: item.notes ? item.notes : null
@@ -48,49 +44,35 @@
       return FirebaseRef.getUserItemsRef().child(categoryId).child(itemId).set(null);
     };
 
-    CategoryBase.getStatsByCategory = function (category) {
-      var stats = {},
-          userItemsRef = FirebaseRef.getUserItemsRef();
-
-      if (category.goalType === 'least') {
-        stats.best = $firebaseArray(userItemsRef.child(category.$id)
-          .orderByChild('valueNumber').limitToFirst(1));
-      } else {
-        stats.best = $firebaseArray(userItemsRef.child(category.$id)
-          .orderByChild('valueNumber').limitToLast(1));
-      }
-
-      stats.latest = $firebaseArray(userItemsRef.child(category.$id)
-        .orderByChild('itemDateTime').limitToLast(1));
-      stats.first = $firebaseArray(userItemsRef.child(category.$id)
-        .orderByChild('itemDateTime').limitToFirst(1));
-      return stats;
-    };
-
-    CategoryBase.getStats = function () {
+    CategoryBase.getStats = function (categoryId) {
       // Get a list of category keys
       var deferred = $q.defer(),
-          userItemsRef = FirebaseRef.getUserItemsRef();
+          userItemsRef = FirebaseRef.getUserItemsRef(),
+          query = FirebaseRef.getCategoriesRef();
 
-      $firebaseArray(FirebaseRef.getCategoriesRef()).$loaded().then(function (categories) {
+      if (categoryId) {
+        // If a specific category is requested...
+        query = query.orderByKey().startAt(categoryId).endAt(categoryId);
+      } else {
+        // Need all categories, so get by priority for ordering purposes
+        query = query.orderByPriority();
+      }
+
+      $firebaseArray(query).$loaded().then(function (categories) {
         angular.forEach(categories, function (category) {
-          category.stats = {};
-
           if (category.goalType === 'most') {
-            category.stats.best = $firebaseArray(userItemsRef.child(category.$id).orderByChild('valueNumber')
+            category.best = $firebaseArray(userItemsRef.child(category.$id).orderByChild('valueNumber')
               .limitToLast(1));
           } else {
-            category.stats.best = $firebaseArray(userItemsRef.child(category.$id).orderByChild('valueNumber')
+            category.best = $firebaseArray(userItemsRef.child(category.$id).orderByChild('valueNumber')
               .limitToFirst(1));
           }
 
-          category.stats.latest = $firebaseArray(userItemsRef.child(category.$id).orderByChild('itemDateTime')
-            .limitToLast(1));
-          category.stats.first = $firebaseArray(userItemsRef.child(category.$id).orderByChild('itemDateTime')
-            .limitToFirst(1));
+          category.items = $firebaseArray(userItemsRef.child(category.$id).orderByPriority());
         });
 
-        deferred.resolve(categories);
+        // return only the first in array if specific category was requested
+        deferred.resolve(categoryId ? categories[0] : categories);
       });
 
       return deferred.promise;

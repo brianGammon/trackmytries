@@ -1,0 +1,40 @@
+{
+    "rules": {
+        "categories": {
+          ".read": true,
+          "goalType": {
+            ".validate": "newData.val() === 'most' || newData.val() === 'least'"
+          }
+        },
+        "userItems": {
+          "$uid": {
+            ".read": "auth != null && auth.uid == $uid",
+            ".write": "auth != null && auth.uid == $uid",
+            "$category": {
+              ".validate": "root.child('categories').child($category).exists()",
+              ".indexOn": "itemDateTime",
+              "$item": {
+                ".validate": "newData.hasChildren(['valueNumber','itemDateTime'])",
+                "valueNumber": {
+                  ".validate": "newData.isNumber()"
+                },
+                "itemDateTime": {
+                  ".validate": "newData.isString() &&
+                                newData.val().matches(/(\\d{4})-(\\d{2})-(\\d{2})T(\\d{2})\\:(\\d{2})\\:(\\d{2})/)"
+                },
+                "notes": {
+                  ".validate": "newData.isString() && newData.val().length <= 100"
+                },
+                "$other": { ".validate": false }
+              }
+            }
+          }
+        },
+        "userProfiles": {
+          "$uid": {
+            ".read": "auth != null && auth.uid == $uid",
+            ".write": "auth != null && auth.uid == $uid"
+          }
+        }
+    }
+}

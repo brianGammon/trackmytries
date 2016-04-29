@@ -8,8 +8,13 @@
 }
 
 .cat-card md-card-content {
-  padding-top: 0;
+  padding: 0;
+  min-height: 124px;
 }
+
+/*.best-try {
+  font-size: larger;
+}*/
 
 .goal-unmet {
   background-color: rgba(255, 64, 129, 1);
@@ -17,16 +22,27 @@
 
 .goal-met {
   background-color: rgba(76, 175, 80, 1);
+  /*fill: rgba(76, 175, 80, 1);*/
 }
 
-.total-tries {
+/*.total-row, .goal-row {
   background-color: rgba(158, 158, 158, 1);
+  border-bottom: 1px solid;
+}*/
+
+.notries {
+  padding: 20px;
 }
 
-.goal-row {
+/*.card-row {
   padding: 0 16px;
   min-height: 40px;
+  border-bottom: 1px solid;
 }
+
+.card-row:last-child {
+  border-bottom: 0;
+}*/
 
 .cat-card md-card-header-text, .cat-card .md-subhead {
   color: white;
@@ -34,8 +50,13 @@
 
 
 .stats-row {
-  padding: 8px;
+  padding: 0 16px;
+  min-height: 40px;
   border-bottom: 1px solid;
+}
+
+.stats-row:last-child {
+  border-bottom: 0;
 }
 
 .items {

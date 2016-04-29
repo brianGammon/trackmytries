@@ -18,7 +18,7 @@
     vm.loading = true;
     vm.currentUser = currentUser;
     if (vm.currentUser) {
-      Category.getStats(vm.currentUser.$id).then(function (categories) {
+      Category.getStats().then(function (categories) {
         vm.dashData = categories;
       })
       .finally(function () {
@@ -29,8 +29,8 @@
     vm.addNew = function (event, category) {
       var priorBest = 0,
           firstItemLogged = true;
-      if (category.stats.best.length > 0) {
-        priorBest = category.stats.best[0].$id;
+      if (category.items.length > 0) {
+        priorBest = category.best[0].$id;
         firstItemLogged = false;
       }
 
@@ -52,7 +52,7 @@
         }
       })
       .then(function () {
-        if (category.stats.best[0].$id !== priorBest && !firstItemLogged) {
+        if (category.best[0].$id !== priorBest && !firstItemLogged) {
           $mdToast.show(
             $mdToast.simple()
               .textContent('Congrats, that is a new PR!')

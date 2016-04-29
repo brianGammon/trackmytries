@@ -23,8 +23,8 @@
 
     if (!item) {
       // Default new item to the value of the last one, if supplied
-      if (category.stats.latest.length > 0) {
-        defaultValue = category.stats.latest[0].valueNumber;
+      if (category.items.length > 0) {
+        defaultValue = category.items[category.items.length - 1].valueNumber;
       }
       vm.item = {};
       vm.item.itemDateTime = new Date(Date.now());

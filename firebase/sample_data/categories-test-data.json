@@ -1,0 +1,30 @@
+{
+  "situps" : {
+    ".priority" : "1",
+    "description" : "Number of sit ups completed in 2 minutes",
+    "goalType" : "most",
+    "name" : "Sit Ups",
+    "valueType" : "count"
+  },
+  "pushups" : {
+    ".priority" : "2",
+    "description" : "Number of push ups completed in 2 minutes",
+    "goalType" : "most",
+    "name" : "Push Ups",
+    "valueType" : "count"
+  },
+  "pullups" : {
+    ".priority" : "3",
+    "description" : "Number of pull ups completed",
+    "goalType" : "most",
+    "name" : "Pull Ups",
+    "valueType" : "count"
+  },
+  "1point5milerun" : {
+    ".priority" : "4",
+    "description" : "Time in minutes and seconds (MM:SS) to run 1.5 miles",
+    "goalType" : "least",
+    "name" : "1.5 Mile Run",
+    "valueType" : "duration"
+  }
+}

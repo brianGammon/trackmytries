@@ -5,62 +5,68 @@
       <span class="md-subhead">{{category.description}}</span>
     </md-card-header-text>
   </md-card-header>
-  <div class="goal-row goal-unmet" layout layout-align="start center">
-    <div flex="40">Current Goal:</div>
-    <div flex="25">100</div>
-    <md-button class="md-icon-button"><ng-md-icon icon="edit"></ng-md-icon></md-button>
-  </div>
-  <div class="goal-row total-tries" layout layout-align="start center">
-    <div flex="40">Tries Tracked:</div>
-    <div flex="25">27</div>
-  </div>
-  <div class="goal-row" ng-if="category.stats.best.length > 0" layout="row" layout-align="start center">
-    Try Summary:
-  </div>
-  <md-card-content ng-if="category.stats.best.length > 0">
-    <div class="stats-row" layout="row" flex layout-align="start center">
-      <div flex="40"><strong>Best</strong></div>
-      <div flex="60" ng-if="category.valueType === 'count'">
-        <strong>{{category.stats.best[0].valueNumber || 0}}</strong>
-        <small> on {{category.stats.best[0].itemDateTime | date:'MM-dd-yyyy'}}</small>
-      </div>
-      <div flex="60" ng-if="category.valueType === 'duration'">
-        <strong>{{category.stats.best[0].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}</strong>
-        <small> on {{category.stats.best[0].itemDateTime | date:'MM-dd-yyyy'}}</small>
-       </div>
+  <!-- <div>
+
+    <div class="card-row" layout="row" layout-align="start center">
+      Try Summary:
     </div>
-    <div class="stats-row" layout="row" flex layout-align="start center">
-      <div flex="40">Latest</div>
-      <div flex="60" ng-if="category.valueType === 'count'">
-        {{category.stats.latest[0].valueNumber || 0}}
-        <small> on {{category.stats.latest[0].itemDateTime | date:'MM-dd-yyyy'}}</small>
+  </div> -->
+  <md-card-content ng-if="category.items.length > 0">
+    <div class="stats-row" layout="row" layout-align="start center">
+      <div flex="40"><strong>Best Try:</strong></div>
+      <div flex="25" ng-if="category.valueType === 'count'">
+        <strong>{{category.best[0].valueNumber || 0}}</strong>
       </div>
-      <div flex="60" ng-if="category.valueType === 'duration'">
-        {{category.stats.latest[0].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}
-        <small> on {{category.stats.latest[0].itemDateTime | date:'MM-dd-yyyy'}}</small>
+      <div flex="25" ng-if="category.valueType === 'duration'">
+        <strong>{{category.best[0].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}</strong>
       </div>
+      <div flex="35"><strong>{{category.best[0].itemDateTime | date:'MM-dd-yyyy'}}</strong></div>
     </div>
-    <div class="stats-row" layout="row" flex layout-align="start center">
-      <div flex="40">First</div>
-      <div flex="60" ng-if="category.valueType === 'count'">
-        {{category.stats.first[0].valueNumber || 0}}
-        <small> on {{category.stats.first[0].itemDateTime | date:'MM-dd-yyyy'}}</small></div>
-      <div flex="60" ng-if="category.valueType === 'duration'">
-        {{category.stats.first[0].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}
-        <small> on {{category.stats.first[0].itemDateTime | date:'MM-dd-yyyy'}}</small>
+    <div class="stats-row" layout="row" layout-align="start center">
+      <div flex="40">Latest Try:</div>
+      <div flex="25" ng-if="category.valueType === 'count'">
+        {{category.items[category.items.length - 1].valueNumber || 0}}
       </div>
+      <div flex="25" ng-if="category.valueType === 'duration'">
+        {{category.items[category.items.length - 1].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}
+      </div>
+      <div flex="35">{{category.items[category.items.length - 1].itemDateTime | date:'MM-dd-yyyy'}}</div>
+
+    </div>
+    <div class="stats-row" layout="row" layout-align="start center">
+      <div flex="40">First Try:</div>
+      <div flex="25" ng-if="category.valueType === 'count'">
+        {{category.items[0].valueNumber || 0}}
+      </div>
+      <div flex="25" ng-if="category.valueType === 'duration'">
+        {{category.items[0].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}
+      </div>
+      <div flex="35">{{category.items[0].itemDateTime | date:'MM-dd-yyyy'}}</div>
+    </div>
+    <div class="stats-row" ng-class="{'goal-met': category.items[category.items.length - 1].valueNumber > 45}" layout layout-align="start center">
+      <div flex="40">Current Goal: </div>
+      <div flex="20">100</div>
+      <!-- <md-button class="md-icon-button" aria-label="Edit {{category.name}} Goal">
+        <ng-md-icon icon="edit"></ng-md-icon>
+      </md-button> -->
+      <!-- <div flex="30" layout="row" layout-align="start center"><ng-md-icon class="goal-met" icon="check_box"></ng-md-icon> Reached!</div> -->
+    </div>
+    <div class="stats-row" layout layout-align="start center">
+      <div flex="40">Total Tries:</div>
+      <div flex="25">{{category.items.length}}</div>
+      <md-button class="md-icon-button" ng-click="addFn({event: $event}, {category: category})" aria-label="Add New {{category.name}} Try">
+        <ng-md-icon icon="add"></ng-md-icon>
+      </md-button>
     </div>
   </md-card-content>
-  <md-card-content ng-if="category.stats.best.length === 0">
-    No {{category.name}} tries logged yet. What are you waiting for?
+  <md-card-content layout layout-align="center center" ng-if="category.items.length === 0">
+    <p class="notries">
+      <em>No {{category.name}} tries logged yet. What are you waiting for?</em>
+    </p>
   </md-card-content>
-  <md-card-actions layout="row">
+  <md-card-actions layout="row" layout-align="center">
     <md-button ng-if="viewAll" data-ui-sref="category({id: category.$id})">
       <ng-md-icon icon="trending_up"></ng-md-icon> View History
-    </md-button>
-    <span flex></span>
-    <md-button aria-label="Add New {{category.name}} Try" ng-click="addFn({event: $event}, {category: category})">
-      <ng-md-icon icon="add"></ng-md-icon> New Try
     </md-button>
   </md-card-actions>
 </md-card>

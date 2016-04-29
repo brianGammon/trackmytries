@@ -5,10 +5,10 @@
   <section flex layout="row" layout-xs="column">
     <div flex class="chart">
       <md-content layout="row" layout-align="center center" layout-fill class="md-whiteframe-z1">
-        <div flex layout layout-align="center center" ng-if="category.items.length < 2" class="no-chart-data">
+        <div flex layout layout-align="center center" ng-if="category.category.items.length < 2" class="no-chart-data">
           <h1>Enter at least 2 tries to see a chart</h1>
         </div>
-        <highchart flex ng-if="category.items.length >= 2" id="chart1" config="category.chartConfig"></highchart>
+        <highchart flex ng-if="category.category.items.length >= 2" id="chart1" config="category.chartConfig"></highchart>
       </md-content>
     </div>
     <div flex="33" flex-xs="100" class="stats">
@@ -17,7 +17,7 @@
       </div>
     </div>
   </section>
-  <section ng-if="category.items.length > 0" layout="column" layout-padding class="history">
+  <section ng-if="category.category.items.length > 0" layout="column" layout-padding class="history">
     <md-content class="md-whiteframe-z1">
       <div layout="row">
         <div flex="33" flex-gt-sm="20">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </md-content>
-    <div class="items md-whiteframe-z1" ng-repeat="item in category.items | orderBy:'-itemDateTime'">
+    <div class="items md-whiteframe-z1" ng-repeat="item in category.category.items | orderBy:'-itemDateTime'">
       <md-content>
       <div layout="row">
         <div flex="33" flex-gt-sm="20" layout layout-align="left center">
