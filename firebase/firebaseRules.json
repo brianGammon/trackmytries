@@ -12,7 +12,7 @@
             ".write": "auth != null && auth.uid == $uid",
             "$category": {
               ".validate": "root.child('categories').child($category).exists()",
-              ".indexOn": "itemDateTime",
+              ".indexOn": "valueNumber",
               "$item": {
                 ".validate": "newData.hasChildren(['valueNumber','itemDateTime'])",
                 "valueNumber": {

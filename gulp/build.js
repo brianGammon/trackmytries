@@ -207,7 +207,7 @@ module.exports = function (gulp, $, config) {
 
   // copy optional favicon in app directory
   gulp.task('favicon', ['clean'], function () {
-    return gulp.src(path.join(config.appDir, 'favicon.ico'))
+    return gulp.src(config.appIconFiles)
       .pipe(gulp.dest(config.buildDir));
   });
 

@@ -11,7 +11,12 @@
         url: '/home',
         templateUrl: 'home/views/home.tpl.html',
         controller: 'HomeCtrl',
-        controllerAs: 'home'
+        controllerAs: 'home',
+        resolve: {
+          currentUser: ['User', function (User) {
+            return User.getUser();
+          }]
+        }
       })
       .state('dashboard', {
         url: '/dashboard',

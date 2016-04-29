@@ -2,21 +2,21 @@
   <md-toolbar>
     <h2 class="md-toolbar-tools"><span>{{category.category.name}} History</span></h2>
   </md-toolbar>
+
   <section flex layout="row" layout-xs="column">
     <div flex class="chart">
       <md-content layout="row" layout-align="center center" layout-fill class="md-whiteframe-z1">
-        <div flex layout layout-align="center center" ng-if="category.category.items.length < 2" class="no-chart-data">
-          <h1>Enter at least 2 tries to see a chart</h1>
+        <div flex layout="column" layout-align="center center" ng-if="category.category.items.length < 2" class="no-chart-data" style="background-image: url(images/demoChart.png)">
+          <h1 class="md-headline">Enter at least 2 tries to see a chart</h1>
         </div>
         <highchart flex ng-if="category.category.items.length >= 2" id="chart1" config="category.chartConfig"></highchart>
       </md-content>
     </div>
     <div flex="33" flex-xs="100" class="stats">
-      <div class="cat-card">
-        <category-stats category="category.category" view-all="false" add-fn="category.showItemDialog(event, category.category)"></category-stats>
-      </div>
+      <category-stats category="category.category" view-all="false" add-fn="category.showItemDialog(event, category.category)"></category-stats>
     </div>
   </section>
+
   <section ng-if="category.category.items.length > 0" layout="column" layout-padding class="history">
     <md-content class="md-whiteframe-z1">
       <div layout="row">

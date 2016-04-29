@@ -41,13 +41,17 @@
       vm.secs = Math.floor(vm.item.valueNumber % 3600 % 60);
     }
 
+    vm.getNumberList = function (num) {
+      return new Array(num);
+    };
+
     vm.cancel = function () {
       $mdDialog.cancel();
     };
 
     vm.save = function () {
       if (category.valueType === 'duration') {
-        vm.item.valueNumber = vm.hours * 3600 + vm.mins * 60 + vm.secs;
+        vm.item.valueNumber = parseInt(vm.hours, 10) * 3600 + parseInt(vm.mins, 10) * 60 + parseInt(vm.secs, 10);
       }
 
       if (vm.form.$valid) {

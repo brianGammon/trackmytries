@@ -25,6 +25,7 @@
 
     CategoryBase.updateItem = function (categoryId, item) {
       return FirebaseRef.getUserItemsRef().child(categoryId).child(item.$id).update({
+        '.priority': item.itemDateTime.toJSON(),
         itemDateTime: item.itemDateTime.toJSON(),
         valueNumber: item.valueNumber,
         notes: item.notes ? item.notes : null

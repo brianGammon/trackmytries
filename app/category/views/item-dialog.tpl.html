@@ -25,17 +25,29 @@
         </md-input-container>
 
         <div layout="row" class="timepicker" ng-if="dialog.category.valueType === 'duration'">
-          <md-input-container class="md-block">
-            <label>HH</label>
-            <input required type="number" min="0" max="24" name="hours" ng-model="dialog.hours"/>
+          <md-input-container style="margin-right: 10px;">
+            <label>Hours</label>
+            <md-select ng-model="dialog.hours">
+              <md-option ng-repeat="h in dialog.getNumberList(24) track by $index" value="{{$index}}">
+                {{$index | padDigits}}
+              </md-option>
+            </md-select>
           </md-input-container>
-          <md-input-container class="md-block">
-            <label>MM</label>
-            <input required type="number" min="0" max="59" name="mins" ng-model="dialog.mins"/>
+          <md-input-container style="margin-right: 10px;">
+            <label>Mins</label>
+            <md-select ng-model="dialog.mins">
+              <md-option ng-repeat="m in dialog.getNumberList(60) track by $index" value="{{$index}}">
+                {{$index | padDigits}}
+              </md-option>
+            </md-select>
           </md-input-container>
-          <md-input-container class="md-block">
-            <label>SS</label>
-            <input required type="number" min="0" max="59" name="secs" ng-model="dialog.secs"/>
+          <md-input-container style="margin-right: 10px;">
+            <label>Secs</label>
+            <md-select ng-model="dialog.secs">
+              <md-option ng-repeat="s in dialog.getNumberList(60) track by $index" value="{{$index}}">
+                {{$index | padDigits}}
+              </md-option>
+            </md-select>
           </md-input-container>
         </div>
 

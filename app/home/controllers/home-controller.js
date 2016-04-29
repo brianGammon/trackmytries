@@ -12,9 +12,12 @@
     .module('home')
     .controller('HomeCtrl', HomeCtrl);
 
-  function HomeCtrl($timeout) {
+  function HomeCtrl(currentUser, User, $timeout) {
     var vm = this;
-    vm.ctrlName = 'HomeCtrl';
+    vm.currentUser = currentUser;
+    vm.logout = function () {
+      User.logout();
+    };
 
     vm.chartConfig = {
       options: {

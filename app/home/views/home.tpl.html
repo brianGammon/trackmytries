@@ -8,8 +8,14 @@
       </p> -->
       <div layout="row" layout-margin>
         <span flex></span>
-        <md-button data-ui-sref='signup'>Sign Up</md-button>
-        <md-button class="md-raised md-primary" data-ui-sref='login'>Log In</md-button>
+        <div layout ng-if="!home.currentUser">
+          <md-button data-ui-sref='signup'>Sign Up</md-button>
+          <md-button class="md-raised md-primary" data-ui-sref='login'>Log In</md-button>
+        </div>
+        <div layout ng-if="home.currentUser">
+          <md-button ng-click="home.logout()">Log Out</md-button>
+          <md-button class="md-raised md-primary" data-ui-sref="dashboard">View Dashboard</md-button>
+        </div>
       </div>
     </div>
     <div class="down-button">
@@ -84,7 +90,9 @@
     <h2>Visualize Your Progress</h2>
     <p>Record all of your tries to chart your results. Set a goal for each category and see where you stand.</p>
   </div>
-  <highchart flex="100" flex-gt-xs="60" id="chart1" config="home.chartConfig"></highchart>
+  <div flex="100" flex-gt-xs="60">
+    <highchart id="demoChart" config="home.chartConfig"></highchart>
+  </div>
 </section>
 
 <section flex>
@@ -98,38 +106,47 @@
     <p class="lead">Always know where you stand with quick access to your stats in each category on the Dashboard</p>
   </div>
 
-  <div layout="column" layout-align="center center" layout-padding flex="100" flex-gt-xs="50">
+  <div layout="column" layout-align="center center" flex="100" flex-gt-xs="50">
     <md-card class="cat-card">
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">Push Ups</span>
+      <md-card-header>
+        <md-card-header-text>
+          <span class="md-title">Push Ups</span>
           <span class="md-subhead">Number of push ups completed in 2 minutes</span>
-        </md-card-title-text>
-      </md-card-title>
+        </md-card-header-text>
+      </md-card-header>
       <md-card-content>
-        <div class="stats-row md-whiteframe-2dp" layout flex layout-align="center center">
-          <div flex><strong>Best Try</strong></div>
-          <div flex><strong>66</strong></div>
-          <div flex><strong>04-22-2016</strong></div>
+        <div class="stats-row" layout="row" layout-align="start center">
+          <div flex="40"><strong>Best Try:</strong></div>
+          <div flex="25">
+            <strong>66</strong>
+          </div>
+          <div flex="35"><strong>04-12-2016</strong></div>
         </div>
-        <div class="stats-row" layout flex layout-align="center center">
-          <div flex>Latest Try</div>
-          <div flex>64</div>
-          <div flex>04-24-2016</div>
+        <div class="stats-row" layout="row" layout-align="start center">
+          <div flex="40">Latest Try:</div>
+          <div flex="25">64</div>
+          <div flex="35">04-28-2016</div>
         </div>
-        <div class="stats-row" layout flex layout-align="center center">
-          <div flex>First Try</div>
-          <div flex>20</div>
-          <div flex>08-04-2013</div>
+        <div class="stats-row" layout="row" layout-align="start center">
+          <div flex="40">First Try:</div>
+          <div flex="25">20</div>
+          <div flex="35">08-04-2013</div>
+        </div>
+        <div class="stats-row goal-met" layout layout-align="start center">
+          <div flex="40">Current Goal: </div>
+          <div flex="20">65</div>
+        </div>
+        <div class="stats-row" layout layout-align="start center">
+          <div flex="40">Total Tries:</div>
+          <div flex="25">17</div>
+          <md-button class="md-icon-button" aria-label="Dummy Button">
+            <ng-md-icon icon="add"></ng-md-icon>
+          </md-button>
         </div>
       </md-card-content>
-      <md-card-actions layout="row">
+      <md-card-actions layout="row" layout-align="center">
         <md-button>
           <ng-md-icon icon="trending_up"></ng-md-icon> View History
-        </md-button>
-        <span flex></span>
-        <md-button class="md-fab md-primary md-mini" aria-label="Add New {{category.name}} Try">
-          <ng-md-icon icon="add"></ng-md-icon>
         </md-button>
       </md-card-actions>
     </md-card>
@@ -174,7 +191,7 @@
     </div>
 </section>
 
-<section id="sign-up-banner" class="content-section" layout="column" layout-align="center center" flex>
+<section id="sign-up-banner" ng-if="!home.currentUser" class="content-section" layout="column" layout-align="center center" flex>
     <h2>Sign Up Now</h2>
     <p>Sign up now for free, and start tracking your "tries" today!</p>
     <md-button class="md-raised md-primary" data-ui-sref='signup'>Sign Up</md-button>
