@@ -18,13 +18,13 @@
 
     vm.categories = Category.getCategories();
 
-    // User.getUser().then(function (user) {
-    //   // Grab our current user and start listening for sign in changes
-    //   vm.currentUser = user;
-    //   User.onSignInChange(updateUser);
-    // });
+    User.getUser().then(function (user) {
+      // Grab our current user and start listening for sign in changes
+      vm.currentUser = user;
+      User.onSignInChange(updateUser);
+    });
 
-    User.onSignInChange(updateUser);
+    // User.onSignInChange(updateUser);
 
     vm.logout = function () {
       signoutClicked = true;

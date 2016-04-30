@@ -1,4 +1,4 @@
-<section flex layout="column" class="title-row">
+<section layout="column" class="title-row">
   <div class="fill-screen" style="background-image: url(images/pushups.jpg)" resize>
     <div layout="column" flex="85" flex-gt-sm="67" class="title-block">
       <h1 class="title md-display-3" ><ng-md-icon class="logo-wht" icon="trending_up" size="56"></ng-md-icon> TrackMyTries</h1>
@@ -26,8 +26,10 @@
   </div>
 </section>
 
-<section id="categories" class="content-section" layout="column" flex>
-  <ng-md-icon class="logo-blk" icon="trending_up" size="44"></ng-md-icon>
+<section id="categories" class="content-section" layout="column">
+  <div layout="row">
+    <ng-md-icon class="logo-blk" icon="trending_up" size="44"></ng-md-icon>
+  </div>
   <div layout="row" layout-xs="column">
     <div layout="column" layout-align="start center" layout-padding flex>
       <div>
@@ -80,33 +82,31 @@
   </div>
 </section>
 
-<section flex>
-    <div class="fill-screen fixed-attachment" style="background-image: url(images/pullups-crop.jpg)" resize>
-    </div>
+<section>
+    <div class="fill-screen fixed-attachment" style="background-image: url(images/pullups-crop.jpg)" resize></div>
 </section>
 
-<section layout="row" layout-xs="column" id="chart" class="content-section" flex>
-  <div layout="column" layout-align="center center" layout-padding flex="100" flex-gt-xs="40">
+<section layout="column" layout-gt-xs="row" id="chart" class="content-section">
+  <div layout="column" layout-align="center center" layout-padding flex-gt-xs="40">
     <h2>Visualize Your Progress</h2>
     <p>Record all of your tries to chart your results. Set a goal for each category and see where you stand.</p>
   </div>
-  <div flex="100" flex-gt-xs="60">
+  <div flex-gt-xs="60">
     <highchart id="demoChart" config="home.chartConfig"></highchart>
   </div>
 </section>
 
-<section flex>
-  <div class="fill-screen fixed-attachment" style="background-image: url(images/situps2-crop.jpg)" resize>
-  </div>
+<section>
+  <div class="fill-screen fixed-attachment" style="background-image: url(images/situps2-crop.jpg)" resize></div>
 </section>
 
-<section id="stats" class="content-section" layout="row" layout-xs="column" flex>
-  <div layout="column" layout-align="center center" layout-padding flex="100" flex-gt-xs="50">
+<section id="stats" class="content-section" layout="row" layout-xs="column">
+  <div layout="column" layout-align="center center" layout-padding flex-gt-xs="50">
     <h2 class="featurette-heading">Track Your Stats</h2>
     <p class="lead">Always know where you stand with quick access to your stats in each category on the Dashboard</p>
   </div>
 
-  <div layout="column" layout-align="center center" flex="100" flex-gt-xs="50">
+  <div layout="column" layout-align="center center" flex-gt-xs="50">
     <md-card class="cat-card">
       <md-card-header>
         <md-card-header-text>
@@ -153,37 +153,36 @@
   </div>
 </section>
 
-<section flex>
-    <div class="fill-screen fixed-attachment" style="background-image: url(images/running2.jpg)" resize>
-    </div>
+<section>
+    <div class="fill-screen fixed-attachment" style="background-image: url(images/running2.jpg)" resize></div>
 </section>
 
-<section id="about" class="content-section" layout="column" layout-align="center center" layout-padding flex>
-    <h1>About</h1>
-    <div>
-      <p>
-        I am a software developer from Richmond VA, and a member of <a href="http://sealteampt.com" target="_blank">SEAL Team Physical Training</a>.
-        TrackMyTries is an application for tracking progress on the PRT and other fitness activities.
-      </p>
-      <p>
-        The application is written in JavaScript using AngularJS and Angular Material. The backend is Firebase,
-        the awesome backend-as-a-service from Google. The project's code is <a href="https://github.com/brianGammon" target="_blank">available on Github</a>.
-      </p>
+<section id="about" class="content-section" layout="column" layout-align="center center" layout-padding>
+  <h1>About</h1>
+  <div>
+    <p>
+      I am a software developer from Richmond VA, and a member of <a href="http://sealteampt.com" target="_blank">SEAL Team Physical Training</a>.
+      TrackMyTries is an application for tracking progress on the PRT and other fitness activities.
+    </p>
+    <p>
+      The application is written in JavaScript using AngularJS and Angular Material. The backend is Firebase,
+      the awesome backend-as-a-service from Google. The project's code is <a href="https://github.com/brianGammon" target="_blank">available on Github</a>.
+    </p>
+  </div>
+  <div class="about-tech" layout="row">
+    <div flex="33" layout="column" layout-align="center center">
+      <a href="https://angularjs.org" target="_blank"><img src="/images/angular-logo.jpg" alt="AngularJS"></a>
+      <h4>AngularJS</h4>
     </div>
-    <div class="about-tech" layout="row" layout-fill>
-      <div flex="33" layout="column" layout-align="center center">
-        <a href="https://angularjs.org" target="_blank"><img src="/images/angular-logo.jpg" alt="AngularJS"></a>
-        <h4>AngularJS</h4>
-      </div>
-      <div flex="33" layout="column" layout-align="center center">
-        <a href="https://nodejs.org" target="_blank"><img src="/images/nodejs.png" alt="Node.js"></a>
-        <h4>Node.js</h4>
-      </div>
-      <div flex="33" layout="column" layout-align="center center">
-        <a href="http://firebase.com" target="_blank"><img src="/images/firebase1.png" alt="Firebase"></a>
-        <h4>Firebase</h4>
-      </div>
+    <div flex="33" layout="column" layout-align="center center">
+      <a href="https://nodejs.org" target="_blank"><img src="/images/nodejs.png" alt="Node.js"></a>
+      <h4>Node.js</h4>
     </div>
+    <div flex="33" layout="column" layout-align="center center">
+      <a href="http://firebase.com" target="_blank"><img src="/images/firebase1.png" alt="Firebase"></a>
+      <h4>Firebase</h4>
+    </div>
+  </div>
 </section>
 
 <section flex>

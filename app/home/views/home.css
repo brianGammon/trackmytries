@@ -93,6 +93,10 @@ table, th, td {
   margin: 8px 0;
 }
 
+.about-tech {
+  width: 100%;
+}
+
 .about-tech img {
   height: 75px;
 }

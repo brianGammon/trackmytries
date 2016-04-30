@@ -1,0 +1,9 @@
+{
+  "firebase": "trackmytries-dev",
+  "public": "build/app",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

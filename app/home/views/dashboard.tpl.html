@@ -1,18 +1,11 @@
-<div flex layout="column">
+<div layout="column">
   <md-toolbar>
     <h2 class="md-toolbar-tools"><span>{{db.currentUser.name}}'s Dashboard</span></h2>
   </md-toolbar>
 
-  <div flex>
     <div layout="row" layout-wrap layout-xs="column">
-      <div flex="33" flex-sm="50" flex-xs="100" data-ng-repeat='category in db.dashData'>
+      <div flex-sm="50" flex-gt-sm="33" data-ng-repeat='category in db.dashData'>
         <category-stats category="category" view-all="true" add-fn="db.addNew(event, category)"></category-stats>
       </div>
     </div>
-  </div>
-  <div>
-    <md-button class="md-raised">
-      <span class="glyphicon glyphicon-plus"></span> Add a new category
-    </md-button>
-  </div>
 </div>
