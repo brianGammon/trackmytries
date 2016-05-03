@@ -52,7 +52,6 @@
         priorBest = category.best[0].$id;
       }
 
-      // var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'));
       $mdDialog.show({
         controller: 'ItemDialogCtrl',
         controllerAs: 'dialog',
@@ -188,6 +187,11 @@
           data: [],
           marker: {
             enabled: true
+          },
+          events: {
+            legendItemClick: function () {
+              return false;
+            }
           }
         }],
         title: {

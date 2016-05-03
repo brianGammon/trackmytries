@@ -17,8 +17,8 @@
           <label>Date</label>
           <input required type="date" name="date" ng-model="dialog.item.itemDateTime"/>
 
-          <div ng-messages="modal.form.date.$error">
-            <div ng-message-exp="['required']">
+          <div ng-messages="dialog.form.date.$error">
+            <div ng-message-exp="['required', 'date']">
               Must be a date
             </div>
           </div>
@@ -56,8 +56,8 @@
           <input required type="number" name="count" ng-model="dialog.item.valueNumber"
                min="0"/>
 
-          <div ng-messages="modal.form.count.$error">
-            <div ng-message-exp="['required', 'min']">
+          <div ng-messages="dialog.form.count.$error">
+            <div ng-message-exp="['required', 'min', 'number']">
               Must be a number greater then zero.
             </div>
           </div>
@@ -70,7 +70,7 @@
       </div>
     </md-dialog-content>
     <md-dialog-actions layout="row">
-      <md-button type="submit" ng-click="dialog.save()">
+      <md-button class="md-raised md-primary" type="submit" ng-click="dialog.save()">
         Save
       </md-button>
     </md-dialog-actions>

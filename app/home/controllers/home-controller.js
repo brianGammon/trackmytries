@@ -57,6 +57,11 @@
           ],
           marker: {
             enabled: true
+          },
+          events: {
+            legendItemClick: function () {
+              return false;
+            }
           }
         }
       ],
