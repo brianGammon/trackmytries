@@ -24,16 +24,12 @@
 
       // items is a promise that must be loaded before trying to render the chart
       vm.category.items.$loaded(function () {
-        console.log('items loaded now');
         if (vm.category.items.length > 0) {
-          console.log('chart init');
           initChart();
           refreshChartData();
         }
 
-        console.log('attaching a watcher');
         vm.category.items.$watch(function () {
-          console.log('items changed');
           if (!chartInit) {
             initChart();
           }

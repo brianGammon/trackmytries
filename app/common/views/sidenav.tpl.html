@@ -1,46 +1,39 @@
-<md-sidenav
-  class="md-sidenav-left"
-  md-component-id="left"
-  md-whiteframe="4"
-  md-is-locked-open="false">
+<md-toolbar>
+  <a class="sidenav-logo" ui-sref="home">
+    <h1 class="md-toolbar-tools"><ng-md-icon class="logo-wht" icon="trending_up"></ng-md-icon> TrackMyTries</h1>
+  </a>
+</md-toolbar>
 
-  <md-toolbar>
-    <a class="sidenav-logo" ui-sref="home">
-      <h1 class="md-toolbar-tools"><ng-md-icon class="logo-wht" icon="trending_up"></ng-md-icon> TrackMyTries</h1>
-    </a>
-  </md-toolbar>
-
-  <md-content layout-padding>
-    <md-list>
-      <md-header class="md-no-sticky">Account:</md-header>
-      <md-list-item class="md-2-line" ng-if="nav.currentUser">
-        <div layout layout-align="start center">
-          <div class="md-list-item-text">
-            <h3 class="md-no-sticky"><strong>{{nav.currentUser.name}}</strong></h3>
-            <p class="md-no-sticky">{{nav.currentUser.email || nav.currentUser.provider}}</p>
-          </div>
-          <md-button ng-if="nav.currentUser" ng-click="nav.logout()">Log out</md-button>
+<md-content layout-padding>
+  <md-list>
+    <md-header class="md-no-sticky">Account:</md-header>
+    <md-list-item class="md-2-line" ng-if="nav.currentUser">
+      <div layout layout-align="start center">
+        <div class="md-list-item-text">
+          <h3 class="md-no-sticky"><strong>{{nav.currentUser.name}}</strong></h3>
+          <p class="md-no-sticky">{{nav.currentUser.email || nav.currentUser.provider}}</p>
+        </div>
+        <md-button ng-if="nav.currentUser" ng-click="nav.logout()">Log out</md-button>
+      </div>
+    </md-list-item>
+    <md-list-item ng-if="!nav.currentUser" ui-sref="login">Login</md-list-item>
+    <md-list-item ng-if="!nav.currentUser" ui-sref="signup">Sign Up</md-list-item>
+    <md-list-item ng-if="nav.currentUser && nav.currentUser.provider === 'password'" ui-sref="change-password">Profile</md-list-item>
+    <md-list-item ng-if="nav.currentUser && nav.currentUser.provider === 'password'" ui-sref="change-password">Change Password</md-list-item>
+  </md-list>
+  <md-divider ></md-divider>
+  <md-list>
+    <md-header class="md-no-sticky">Navigation</md-header>
+    <md-list-item ng-if="!nav.currentUser"ui-sref="home">Home</md-list-item>
+    <div ng-if="nav.currentUser">
+      <md-list-item ui-sref="dashboard">
+        Dashboard
+      </md-list-item>
+      <md-list-item ng-repeat="category in nav.categories" ui-sref="category({id: category.$id})">
+        <div class="md-list-item-text">
+          <p>{{category.name}}</p>
         </div>
       </md-list-item>
-      <md-list-item ng-if="!nav.currentUser" ui-sref="login">Login</md-list-item>
-      <md-list-item ng-if="!nav.currentUser" ui-sref="signup">Sign Up</md-list-item>
-      <md-list-item ng-if="nav.currentUser && nav.currentUser.provider === 'password'" ui-sref="change-password">Profile</md-list-item>
-      <md-list-item ng-if="nav.currentUser && nav.currentUser.provider === 'password'" ui-sref="change-password">Change Password</md-list-item>
-    </md-list>
-    <md-divider ></md-divider>
-    <md-list>
-      <md-header class="md-no-sticky">Navigation</md-header>
-      <md-list-item ng-if="!nav.currentUser"ui-sref="home">Home</md-list-item>
-      <div ng-if="nav.currentUser">
-        <md-list-item ui-sref="dashboard">
-          Dashboard
-        </md-list-item>
-        <md-list-item ng-repeat="category in nav.categories" ui-sref="category({id: category.$id})">
-          <div class="md-list-item-text">
-            <p>{{category.name}}</p>
-          </div>
-        </md-list-item>
-      </div>
-    </md-list>
-  </md-content>
-</md-sidenav>
+    </div>
+  </md-list>
+</md-content>

@@ -19,7 +19,10 @@
         <ng-md-icon icon="menu"></ng-md-icon>
       </md-button>
 
-      <ng-include src="'common/views/sidenav.tpl.html'"></ng-include>
+      <md-sidenav
+        md-component-id="left"
+        ng-include src="'common/views/sidenav.tpl.html'">
+      </md-sidenav>
 
       <md-content class="main">
         <ui-view autoscroll="true"></ui-view>
