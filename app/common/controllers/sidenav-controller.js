@@ -12,11 +12,15 @@
     .module('common')
     .controller('SidenavCtrl', SidenavCtrl);
 
-  function SidenavCtrl($timeout, $state, $mdToast, User, Category) {
+  function SidenavCtrl($timeout, $state, $mdToast, $mdSidenav, User, Category) {
     var vm = this,
         signoutClicked = false;
 
     vm.categories = Category.getCategories();
+
+    vm.toggleNav = function () {
+      $mdSidenav('left').toggle();
+    };
 
     User.getUser().then(function (user) {
       // Grab our current user and start listening for sign in changes
@@ -36,7 +40,6 @@
       $timeout(function () {
         // Before asking for the current user, see if we had one before
         var userBefore = !!vm.currentUser;
-
         User.getUser().then(function (user) {
           vm.currentUser = user;
           if (!vm.currentUser && userBefore) {

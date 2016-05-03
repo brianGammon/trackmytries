@@ -3,6 +3,31 @@ html, body {
   background: #E0E0E0;
 }
 
+.body-wrapper {
+  height: 100%;
+}
+
+.body-wrapper md-list-item {
+  height: 40px;
+}
+
+.body-wrapper md-list-item.md-2-line {
+  min-height: 50px;
+  height: 50px;
+}
+
+/* Workaround - iOS dialog issue */
+/* https://github.com/angular/material/issues/3079 */
+.md-dialog-container{
+  position: fixed;
+  top: 0 !important;
+  height: 100%;
+}
+.md-dialog-container md-dialog{
+  max-height: 100%;
+}
+/* End workaround - iOS dialog issue*/
+
 ng-md-icon {
   height: auto;
   width: auto;
@@ -19,11 +44,11 @@ md-content.main {
 }
 
 md-toast.md-success-toast-theme .md-toast-content {
-  background-color: rgba(0, 128, 0, .8);
+  background-color: rgba(0, 128, 0, 1);
 }
 
 md-toast.md-error-toast-theme .md-toast-content {
-  background-color: rgba(255, 0, 0, .8);
+  background-color: rgba(255, 0, 0, 1);
 }
 
 alert-box md-content {
@@ -34,13 +59,4 @@ a.sidenav-logo {
   text-decoration: none;
   color: white;
 
-}
-
-sidenav md-list-item {
-  height: 40px;
-}
-
-sidenav md-list-item.md-2-line {
-  min-height: 50px;
-  height: 50px;
 }

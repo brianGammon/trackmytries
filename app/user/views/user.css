@@ -1,8 +1,5 @@
 .userForm {
-  margin-top: 60px;
-}
-
-.userFormContent {
-  max-width:  90%;
+  background-color: white;
   width: 500px;
+  max-width: 90%;
 }

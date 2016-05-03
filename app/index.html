@@ -13,14 +13,18 @@
     <!-- endinject -->
     <link href='//fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
   </head>
-  <body ng-cloak>
-    <menu-nav></menu-nav>
-    <sidenav></sidenav>
+  <body>
+    <div class="body-wrapper" ng-controller="SidenavCtrl as nav">
+      <md-button id="menu-button" class="md-fab md-mini" ng-click="nav.toggleNav()" aria-label="Menu">
+        <ng-md-icon icon="menu"></ng-md-icon>
+      </md-button>
 
-    <md-content class="main" layout="column">
-      <ui-view autoscroll="true"></ui-view>
-    </md-content>
+      <ng-include src="'common/views/sidenav.tpl.html'"></ng-include>
 
+      <md-content class="main">
+        <ui-view autoscroll="true"></ui-view>
+      </md-content>
+    </div>
     <!-- bower:js -->
     <!-- endbower -->
     <!-- inject:js -->

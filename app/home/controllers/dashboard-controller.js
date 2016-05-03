@@ -38,7 +38,7 @@
       $mdDialog.show({
         controller: 'ItemDialogCtrl',
         controllerAs: 'dialog',
-        templateUrl: '/category/views/item-dialog.tpl.html',
+        templateUrl: 'category/views/item-dialog.tpl.html',
         targetEvent: event,
         clickOutsideToClose: true,
         fullscreen: false,

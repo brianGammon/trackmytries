@@ -1,7 +1,8 @@
 <md-sidenav
   class="md-sidenav-left"
   md-component-id="left"
-  md-whiteframe="4">
+  md-whiteframe="4"
+  md-is-locked-open="false">
 
   <md-toolbar>
     <a class="sidenav-logo" ui-sref="home">
@@ -11,7 +12,7 @@
 
   <md-content layout-padding>
     <md-list>
-      <md-header class="md-no-sticky">Account</md-header>
+      <md-header class="md-no-sticky">Account:</md-header>
       <md-list-item class="md-2-line" ng-if="nav.currentUser">
         <div layout layout-align="start center">
           <div class="md-list-item-text">
@@ -39,7 +40,7 @@
             <p>{{category.name}}</p>
           </div>
         </md-list-item>
-      </div>      
+      </div>
     </md-list>
   </md-content>
 </md-sidenav>
