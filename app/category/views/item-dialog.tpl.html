@@ -1,4 +1,4 @@
-<md-dialog class="item-dialog" aria-label="Item Editor"  ng-cloak>
+<md-dialog aria-label="Item Editor" ng-cloak>
   <form name="dialog.form" novalidate>
     <md-toolbar>
       <div class="md-toolbar-tools">
@@ -11,21 +11,19 @@
     </md-toolbar>
     <md-dialog-content>
       <div class="md-dialog-content">
-        {{dialog.errorMessage}}
-        <!-- <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker> -->
-        <md-input-container class="md-block">
-          <label>Date</label>
-          <input required type="date" name="date" ng-model="dialog.item.itemDateTime"/>
-
-          <div ng-messages="dialog.form.date.$error">
-            <div ng-message-exp="['required', 'date']">
-              Must be a date
+        <!-- <label>Date</label>
+        <input required type="date" name="date" ng-model="dialog.item.itemDateTime"/> -->
+        <div class="date-wrapper">
+          <md-datepicker name="itemDateTime" ng-model="dialog.item.itemDateTime" md-placeholder="Enter date" required></md-datepicker>
+          <div class="date-validation" ng-messages="dialog.form.itemDateTime.$error">
+            <div ng-message-exp="['required', 'valid']">
+              Valid date is required
             </div>
           </div>
-        </md-input-container>
+        </div>
 
         <div layout="row" class="timepicker" ng-if="dialog.category.valueType === 'duration'">
-          <md-input-container style="margin-right: 10px;">
+          <md-input-container>
             <label>Hours</label>
             <md-select ng-model="dialog.hours">
               <md-option ng-repeat="h in dialog.getNumberList(24) track by $index" value="{{$index}}">
@@ -33,7 +31,7 @@
               </md-option>
             </md-select>
           </md-input-container>
-          <md-input-container style="margin-right: 10px;">
+          <md-input-container>
             <label>Mins</label>
             <md-select ng-model="dialog.mins">
               <md-option ng-repeat="m in dialog.getNumberList(60) track by $index" value="{{$index}}">
@@ -41,7 +39,7 @@
               </md-option>
             </md-select>
           </md-input-container>
-          <md-input-container style="margin-right: 10px;">
+          <md-input-container>
             <label>Secs</label>
             <md-select ng-model="dialog.secs">
               <md-option ng-repeat="s in dialog.getNumberList(60) track by $index" value="{{$index}}">

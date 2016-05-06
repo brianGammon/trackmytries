@@ -1,3 +1,23 @@
+/* Category Detail Page */
+.chart {
+  margin: 8px;
+}
+
+.chart md-content {
+  min-height: 320px;
+}
+
+.no-chart-data {
+  min-height: 320px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.items {
+  background-color: white;
+}
+
+/* Category Stats Card Directive */
 .cat-card {
   min-height: 320px;
 }
@@ -12,9 +32,9 @@
   min-height: 124px;
 }
 
-/*.best-try {
-  font-size: larger;
-}*/
+.cat-card md-card-header-text, .cat-card .md-subhead {
+  color: white;
+}
 
 .goal-unmet {
   background-color: rgba(255, 64, 129, 1);
@@ -22,33 +42,12 @@
 
 .goal-met {
   background-color: rgba(76, 175, 80, 1);
-  /*fill: rgba(76, 175, 80, 1);*/
 }
-
-/*.total-row, .goal-row {
-  background-color: rgba(158, 158, 158, 1);
-  border-bottom: 1px solid;
-}*/
 
 .notries {
   height: 103px;
   padding: 20px;
 }
-
-/*.card-row {
-  padding: 0 16px;
-  min-height: 40px;
-  border-bottom: 1px solid;
-}
-
-.card-row:last-child {
-  border-bottom: 0;
-}*/
-
-.cat-card md-card-header-text, .cat-card .md-subhead {
-  color: white;
-}
-
 
 .stats-row {
   padding: 0 16px;
@@ -58,26 +57,4 @@
 
 .total-tries {
   border-bottom: 0;
-}
-
-.items {
-  background-color: white;
-}
-
-.item-dialog {
-  min-width: 350px;
-}
-
-.chart {
-  margin: 8px;
-}
-
-.chart md-content {
-  min-height: 320px;
-}
-
-.no-chart-data {
-  min-height: 320px;
-  background-size: cover;
-  background-position: center center;
 }

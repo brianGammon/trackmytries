@@ -1,0 +1,18 @@
+.date-validation {
+  font-size: 12px;
+  color: #dd2c00;
+  margin-left: 15px;
+}
+
+.date-wrapper {
+  margin-left: -15px;
+  margin-bottom: 30px;
+}
+
+.md-datepicker-input-container {
+  margin-left: 0px;
+}
+
+.timepicker md-input-container {
+  margin-right: 10px;
+}

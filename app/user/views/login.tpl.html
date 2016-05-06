@@ -51,7 +51,7 @@
   <div ng-if="!user.currentUser" class="userForm md-whiteframe-z1" layout="column" layout-align="start center">
     <p>Or, use your Facebook account</p>
     <div flex></div>
-    <md-button type="button" class="md-fab md-mini md-primary" data-ng-click="user.facebookLogin()">
+    <md-button type="button" class="md-fab md-mini md-primary" data-ng-click="user.facebookLogin()" aria-label="Facebook Sign In">
       <ng-md-icon icon="facebook"></ng-md-icon>
     </md-button>
   </div>

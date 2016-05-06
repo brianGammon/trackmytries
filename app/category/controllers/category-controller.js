@@ -146,6 +146,7 @@
           chart: {
             type: 'areaspline'
           },
+          exporting: {enabled: false},
           tooltip: {
             pointFormatter: function () {
               if (vm.category.valueType === 'duration') {

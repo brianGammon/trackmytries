@@ -78,7 +78,6 @@
     };
 
     UserBase.logout = function () {
-      console.log(fbObjs);
       angular.forEach(fbObjs, function (obj) {
         obj.$destroy();
       });

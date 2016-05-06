@@ -35,8 +35,19 @@ ng-md-icon {
 
 #menu-button {
   position: fixed;
-  right: 10px;
-  top: 5px;
+  margin: 0;
+  right: 16px;
+  top: 11px;
+}
+@media (max-width: 959px) {
+  #menu-button {
+    top: 3px;
+  }
+}
+@media (max-width: 599px) {
+  #menu-button {
+    top: 7px;
+  }
 }
 
 md-content.main {
@@ -49,10 +60,6 @@ md-toast.md-success-toast-theme .md-toast-content {
 
 md-toast.md-error-toast-theme .md-toast-content {
   background-color: rgba(255, 0, 0, 1);
-}
-
-alert-box md-content {
-  border-left: 5px solid red;
 }
 
 a.sidenav-logo {
