@@ -3,6 +3,10 @@ html, body {
   background: #E0E0E0;
 }
 
+h2.md-toolbar-tools {
+  margin-left: 50px;
+}
+
 .body-wrapper {
   height: 100%;
 }
@@ -36,7 +40,7 @@ ng-md-icon {
 #menu-button {
   position: fixed;
   margin: 0;
-  right: 16px;
+  left: 16px;
   top: 11px;
 }
 @media (max-width: 959px) {
@@ -44,7 +48,7 @@ ng-md-icon {
     top: 3px;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 679px) {
   #menu-button {
     top: 7px;
   }
