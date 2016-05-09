@@ -12,15 +12,20 @@
     .module('user')
     .factory('User', User);
 
-  function User($q, Auth, FirebaseRef, $firebaseObject, Category) {
+  function User($q, Auth, FirebaseRef, $firebaseObject, CacheFactory) {
     var UserBase = {},
         callbacks = [],
-        fbObjs = [];
-        // auth = $firebaseAuth(ref);
+        userCache;
+
+    if (!CacheFactory.get('userCache')) {
+      CacheFactory.createCache('userCache');
+    }
+
+    userCache = CacheFactory.get('userCache');
 
     Auth.$onAuth(function (authData) {
       if (!authData) {
-        Category.resetCache();
+        reset();
       }
       angular.forEach(callbacks, function (callback) {
         callback();
@@ -30,15 +35,26 @@
     UserBase.getUser = function () {
       var deferred = $q.defer(),
           authInfo = Auth.$getAuth(),
-          userObj;
+          userRef,
+          userPromise;
 
       if (!authInfo) {
+        console.log('No user is logged in');
         deferred.resolve(null);
         return deferred.promise;
       }
-      userObj = $firebaseObject(FirebaseRef.getUserProfilesRef());
-      fbObjs.push(userObj);
-      return userObj.$loaded();
+
+      if (!userCache.get('userPromise')) {
+        console.log('calling fb for user profile');
+        userRef = $firebaseObject(FirebaseRef.getUserProfilesRef());
+        userPromise = userRef.$loaded();
+        userCache.put('userRef', userRef);
+        userCache.put('userPromise', userPromise);
+      } else {
+        console.log('serving user profile from cache');
+      }
+
+      return userCache.get('userPromise');
     };
 
     UserBase.login = function (credentials) {
@@ -81,9 +97,7 @@
     };
 
     UserBase.logout = function () {
-      angular.forEach(fbObjs, function (obj) {
-        obj.$destroy();
-      });
+      reset();
       Auth.$unauth();
     };
 
@@ -125,6 +139,38 @@
           throw new Error('Unsupported auth provider: ' + authInfo.provider);
       }
       return usersRef.update(userProfile);
+    }
+
+    function reset() {
+      // Disconnects firebase array and objects and cleans up caches
+      var categoryCache = CacheFactory.get('category'),
+          itemsCache = CacheFactory.get('items');
+
+      // disconnect userProfile obj and remove from cache
+      if (userCache.get('userRef')) {
+        console.log('$destroy userRef');
+        userCache.get('userRef').$destroy();
+      }
+      userCache.removeAll();
+
+      // Clear any cached categories
+      if (categoryCache) {
+        // No need to call $destroy on categories, but might later
+        // once user categories is implemented
+        console.log('remove all categories');
+        categoryCache.removeAll();
+      }
+
+      // Disconnect userItems arrays and clear from cache
+      if (itemsCache) {
+        angular.forEach(itemsCache.keys(), function (key) {
+          // Disconnecting all firebase Arrays from server
+          var obj = itemsCache.get(key);
+          obj.best.$destroy();
+          obj.items.$destroy();
+        });
+        itemsCache.removeAll();
+      }
     }
   }
 }());

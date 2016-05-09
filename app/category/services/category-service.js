@@ -12,24 +12,33 @@
     .module('category')
     .factory('Category', Category);
 
-  function Category($firebaseArray, $firebaseObject, FirebaseRef, $cacheFactory) {
+  function Category($firebaseArray, $firebaseObject, FirebaseRef, CacheFactory) {
     var CategoryBase = {},
-        categoryCache = $cacheFactory('category'),
-        itemsCache = $cacheFactory('items');
+        categoryCache,
+        itemsCache;
+
+    if (!CacheFactory.get('category')) {
+      CacheFactory.createCache('category');
+    }
+
+    if (!CacheFactory.get('items')) {
+      CacheFactory.createCache('items');
+    }
+
+    categoryCache = CacheFactory.get('category');
+    itemsCache = CacheFactory.get('items');
 
     CategoryBase.getCategories = function () {
       var firebaseArray = $firebaseArray(FirebaseRef.getCategoriesRef());
 
       if (!categoryCache.get('categories')) {
+        console.log('calling fb for categories');
         categoryCache.put('categories', firebaseArray.$loaded());
+      } else {
+        console.log('serving categories from cache');
       }
 
       return categoryCache.get('categories');
-    };
-
-    CategoryBase.resetCache = function () {
-      categoryCache.removeAll();
-      itemsCache.removeAll();
     };
 
     CategoryBase.updateItem = function (categoryId, item) {
@@ -68,10 +77,10 @@
         }
         stats.items = $firebaseArray(userItemsRef.child(category.$id).orderByPriority());
 
-        console.log('caching items for: ' + category.name);
+        console.log('calling fb for items: ' + category.name);
         itemsCache.put(category.$id, stats);
       } else {
-        console.log('Using cached items for: ' + category.name);
+        console.log('serving items from cache for: ' + category.name);
       }
 
       return itemsCache.get(category.$id);

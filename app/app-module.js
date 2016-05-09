@@ -11,6 +11,7 @@
       'ngMaterial',
       'ui.router',
       'ui.router.title',
+      'angular-cache',
       'ngMdIcons',
       'ngMessages',
       'firebase',
