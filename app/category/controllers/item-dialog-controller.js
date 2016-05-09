@@ -12,9 +12,8 @@
     .module('category')
     .controller('ItemDialogCtrl', ItemDialogCtrl);
 
-  function ItemDialogCtrl(category, item, Category, $mdDialog, $mdToast) {
-    var vm = this,
-        defaultValue = 0;
+  function ItemDialogCtrl(category, item, lastValue, Category, $mdDialog, $mdToast) {
+    var vm = this;
 
     vm.category = category;
     vm.hours = 0;
@@ -22,13 +21,9 @@
     vm.secs = 0;
 
     if (!item) {
-      // Default new item to the value of the last one, if supplied
-      if (category.items.length > 0) {
-        defaultValue = category.items[category.items.length - 1].valueNumber;
-      }
       vm.item = {};
       vm.item.itemDateTime = new Date(Date.now());
-      vm.item.valueNumber = defaultValue;
+      vm.item.valueNumber = lastValue ? lastValue : 0;
     } else {
       vm.item = item;
       vm.item.itemDateTime = new Date(item.itemDateTime);

@@ -16,7 +16,9 @@
     var vm = this,
         signoutClicked = false;
 
-    vm.categories = Category.getCategories();
+    Category.getCategories().then(function (categories) {
+      vm.categories = categories;
+    });
 
     vm.toggleNav = function () {
       $mdSidenav('left').toggle();

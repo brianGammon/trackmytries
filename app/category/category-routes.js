@@ -15,6 +15,26 @@
         resolve: {
           loggedIn: ['User', function (User) {
             return User.signInRequired();
+          }],
+          activeCategory: ['Category', '$stateParams', function (Category, $stateParams) {
+            return Category.getCategories().then(function (categories) {
+              var activeCategory;
+              angular.forEach(categories, function (category) {
+                if (category.$id === $stateParams.id) {
+                  activeCategory = category;
+                }
+              });
+              return activeCategory;
+            });
+          }],
+          $title: ['activeCategory', function (activeCategory) {
+            var name = 'Category History';
+
+            if (activeCategory) {
+              name = activeCategory.name;
+            }
+
+            return name + ' History';
           }]
         }
       });

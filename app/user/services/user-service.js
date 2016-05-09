@@ -12,13 +12,16 @@
     .module('user')
     .factory('User', User);
 
-  function User($q, Auth, FirebaseRef, $firebaseObject) {
+  function User($q, Auth, FirebaseRef, $firebaseObject, Category) {
     var UserBase = {},
         callbacks = [],
         fbObjs = [];
         // auth = $firebaseAuth(ref);
 
-    Auth.$onAuth(function () {
+    Auth.$onAuth(function (authData) {
+      if (!authData) {
+        Category.resetCache();
+      }
       angular.forEach(callbacks, function (callback) {
         callback();
       });

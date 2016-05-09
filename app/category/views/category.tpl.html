@@ -6,18 +6,18 @@
   <section layout="row" layout-xs="column">
     <div flex class="chart">
       <md-content layout="row" layout-align="center center" layout-fill class="md-whiteframe-z1">
-        <div class="no-chart-data" flex layout="column" layout-align="center center" ng-if="category.category.items.length < 2" style="background-image: url(images/demoChart.png)">
+        <div class="no-chart-data" flex layout="column" layout-align="center center" ng-if="category.stats.items.length < 2" style="background-image: url(images/demoChart.png)">
           <h1 class="md-headline md-padding">Enter at least 2 tries to see a chart</h1>
         </div>
-        <highchart flex ng-if="category.category.items.length >= 2" config="category.chartConfig"></highchart>
+        <highchart flex ng-if="category.stats.items.length >= 2" config="category.chartConfig"></highchart>
       </md-content>
     </div>
     <div flex-gt-xs="40">
-      <category-stats category="category.category" view-all="false" add-fn="category.showItemDialog(event, category.category)"></category-stats>
+      <category-stats category="category.category" stats="category.stats" view-all="false" add-fn="category.showItemDialog(event, category.category)"></category-stats>
     </div>
   </section>
 
-  <section ng-if="category.category.items.length > 0" layout="column" layout-padding>
+  <section ng-if="category.stats.items.length > 0" layout="column" layout-padding>
     <md-content class="md-whiteframe-z1">
       <div layout="row">
         <div flex="33" flex-gt-sm="20">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </md-content>
-    <div class="items md-whiteframe-z1" ng-repeat="item in category.category.items | orderBy:'-itemDateTime'">
+    <div class="items md-whiteframe-z1" ng-repeat="item in category.stats.items | orderBy:'-itemDateTime'">
       <md-content>
       <div layout="row">
         <div flex="33" flex-gt-sm="20" layout layout-align="left center">

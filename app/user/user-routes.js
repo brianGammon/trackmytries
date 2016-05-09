@@ -15,7 +15,10 @@
         resolve: {
           currentUser: ['User', function (User) {
             return User.getUser();
-          }]
+          }],
+          $title: function () {
+            return 'Login';
+          }
         }
       })
       .state('signup', {
@@ -26,7 +29,10 @@
         resolve: {
           currentUser: ['User', function (User) {
             return User.getUser();
-          }]
+          }],
+          $title: function () {
+            return 'Sign Up';
+          }
         }
       })
       .state('change-password', {
@@ -39,7 +45,10 @@
             return User.signInRequired().then(function () {
               return User.getUser();
             });
-          }]
+          }],
+          $title: function () {
+            return 'Change Password';
+          }
         }
       });
   }

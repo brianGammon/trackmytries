@@ -28,6 +28,7 @@
       replace: true,
       scope: {
         category: '=',
+        stats: '=',
         viewAll: '=',
         addFn: '&'
       }

@@ -15,7 +15,10 @@
         resolve: {
           currentUser: ['User', function (User) {
             return User.getUser();
-          }]
+          }],
+          $title: function () {
+            return 'Home';
+          }
         }
       })
       .state('dashboard', {
@@ -28,7 +31,10 @@
             return User.signInRequired().then(function () {
               return User.getUser();
             });
-          }]
+          }],
+          $title: function () {
+            return 'Dashboard';
+          }
         }
       });
   }

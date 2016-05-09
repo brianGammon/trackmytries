@@ -15,22 +15,22 @@
   function DashboardCtrl(currentUser, Category, $mdDialog, $mdToast) {
     var vm = this;
 
-    vm.loading = true;
+    vm.stats = {};
     vm.currentUser = currentUser;
-    if (vm.currentUser) {
-      Category.getStats().then(function (categories) {
-        vm.dashData = categories;
-      })
-      .finally(function () {
-        vm.loading = false;
+
+    Category.getCategories().then(function (categories) {
+      vm.categories = categories;
+
+      angular.forEach(categories, function (category) {
+        vm.stats[category.$id] = Category.getStats(category);
       });
-    }
+    });
 
     vm.addNew = function (event, category) {
       var priorBest = 0,
           firstItemLogged = true;
-      if (category.items.length > 0) {
-        priorBest = category.best[0].$id;
+      if (vm.stats[category.$id].items.length > 0) {
+        priorBest = vm.stats[category.$id].best[0].$id;
         firstItemLogged = false;
       }
 
@@ -48,11 +48,17 @@
           },
           item: function () {
             return null;
+          },
+          lastValue: function () {
+            if (vm.stats[category.$id].items.length > 0) {
+              return vm.stats[category.$id].items[vm.stats[category.$id].items.length - 1].valueNumber;
+            }
+            return 0;
           }
         }
       })
       .then(function () {
-        if (category.best[0].$id !== priorBest && !firstItemLogged) {
+        if (vm.stats[category.$id].best[0].$id !== priorBest && !firstItemLogged) {
           $mdToast.show(
             $mdToast.simple()
               .textContent('Congrats, that is a new PR!')

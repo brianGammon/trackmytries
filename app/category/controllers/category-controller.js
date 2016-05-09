@@ -12,40 +12,33 @@
     .module('category')
     .controller('CategoryCtrl', CategoryCtrl);
 
-  function CategoryCtrl($timeout, $mdDialog, $mdToast, $stateParams, $filter, Category) {
+  function CategoryCtrl(activeCategory, Category, $timeout, $mdDialog, $mdToast, $filter) {
     var vm = this,
-        chartInit = false,
-        categoryId = $stateParams.id;
+        chartInit = false;
 
-    vm.loading = true;
+    vm.category = activeCategory;
+    vm.stats = Category.getStats(activeCategory);
 
-    Category.getStats(categoryId).then(function (category) {
-      vm.category = category;
+    // items is a promise that must be loaded before trying to render the chart
+    vm.stats.items.$loaded(function () {
+      if (vm.stats.items.length > 0) {
+        initChart();
+        refreshChartData();
+      }
 
-      // items is a promise that must be loaded before trying to render the chart
-      vm.category.items.$loaded(function () {
-        if (vm.category.items.length > 0) {
+      // Set a watcher to reflow the chart after a change
+      vm.stats.items.$watch(function () {
+        if (!chartInit) {
           initChart();
-          refreshChartData();
         }
-
-        vm.category.items.$watch(function () {
-          if (!chartInit) {
-            initChart();
-          }
-          refreshChartData();
-        });
+        refreshChartData();
       });
-    })
-    .catch(onError)
-    .finally(function () {
-      vm.loading = false;
     });
 
     vm.showItemDialog = function (event, category, item) {
       var priorBest = 0;
-      if (vm.category.items.length > 0) {
-        priorBest = category.best[0].$id;
+      if (vm.stats.items.length > 0) {
+        priorBest = vm.stats.best[0].$id;
       }
 
       $mdDialog.show({
@@ -66,12 +59,18 @@
             }
             // This is an update so pass a copy of the item
             return angular.copy(item);
+          },
+          lastValue: function () {
+            if (!item && vm.stats.items.length > 0) {
+              return vm.stats.items[vm.stats.items.length - 1].valueNumber;
+            }
+            return 0;
           }
         }
       })
       .then(function () {
-        if (category.best[0].$id !== priorBest &&
-            vm.category.items.length > 1) {
+        if (vm.stats.best[0].$id !== priorBest &&
+            vm.stats.items.length > 1) {
           $mdToast.show(
             $mdToast.simple()
               .textContent('Congrats, that is a new PR!')
@@ -107,7 +106,7 @@
           chartSeries1 = [];
 
       // Sort the items array by date, descending
-      itemsCopy = $filter('orderBy')(angular.copy(vm.category.items), 'itemDateTime', true);
+      itemsCopy = $filter('orderBy')(angular.copy(vm.stats.items), 'itemDateTime', true);
 
       angular.forEach(itemsCopy, function (item) {
         // Date fix for view
@@ -127,7 +126,7 @@
     }
 
     function initChart() {
-      var items = vm.category.items,
+      var items = vm.stats.items,
           latestTry = items[items.length - 1].valueNumber,
           seriesName = vm.category.valueType === 'duration' ? 'Time in MM:SS' : 'Number completed',
           goalLabel = 'Goal: ' + (latestTry + 1),

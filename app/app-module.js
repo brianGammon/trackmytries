@@ -10,6 +10,7 @@
     .module('trackmytries', [
       'ngMaterial',
       'ui.router',
+      'ui.router.title',
       'ngMdIcons',
       'ngMessages',
       'firebase',
