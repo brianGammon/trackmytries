@@ -13,7 +13,7 @@
       </md-content>
     </div>
     <div flex-gt-xs="40">
-      <category-stats category="category.category" stats="category.stats" view-all="false" add-fn="category.showItemDialog(event, category.category)"></category-stats>
+      <category-stats category="category.category" stats="category.stats" goal="category.currentUser.goals[category.category.$id]" view-all="false" add-fn="category.showItemDialog(event, category.category)"></category-stats>
     </div>
   </section>
 

@@ -12,12 +12,13 @@
     .module('category')
     .controller('CategoryCtrl', CategoryCtrl);
 
-  function CategoryCtrl(activeCategory, Category, $timeout, $mdDialog, $mdToast, $filter) {
+  function CategoryCtrl(currentUser, activeCategory, Category, $timeout, $mdDialog, $mdToast, $filter) {
     var vm = this,
         chartInit = false;
 
     vm.category = activeCategory;
     vm.stats = Category.getStats(activeCategory);
+    vm.currentUser = currentUser;
 
     // items is a promise that must be loaded before trying to render the chart
     vm.stats.items.$loaded(function () {
@@ -26,11 +27,17 @@
         refreshChartData();
       }
 
-      // Set a watcher to reflow the chart after a change
+      // Set a watcher to redraw the chart after a change
       vm.stats.items.$watch(function () {
         if (!chartInit) {
           initChart();
         }
+        refreshChartData();
+      });
+
+      // Redraw the chart when the userProfile changes (goal change)
+      currentUser.$watch(function () {
+        initChart();
         refreshChartData();
       });
     });
@@ -126,19 +133,8 @@
     }
 
     function initChart() {
-      var items = vm.stats.items,
-          latestTry = items[items.length - 1].valueNumber,
-          seriesName = vm.category.valueType === 'duration' ? 'Time in MM:SS' : 'Number completed',
-          goalLabel = 'Goal: ' + (latestTry + 1),
-          minY = null;
-
-      if (vm.category.goalType === 'less') {
-        minY = Math.round(vm.category.best[0].valueNumber * 0.95, 0);
-      }
-
-      if (vm.category.valueType === 'duration') {
-        goalLabel = 'Goal: ' + secondsToHms(latestTry - 60);
-      }
+      var seriesName = vm.category.valueType === 'duration' ? 'Time in MM:SS' : 'Number completed',
+          plotLineConfig = buildPlotLine();
 
       vm.chartConfig = {
         options: {
@@ -156,16 +152,8 @@
             }
           },
           yAxis: {
-            min: minY,
             title: {text: null},
-            plotLines: [{
-              value: latestTry + 1,
-              color: 'green',
-              width: 2,
-              zIndex: 3,
-              label: {text: goalLabel},
-              dashStyle: 'shortdash'
-            }],
+            plotLines: [plotLineConfig],
             labels: {
               formatter: function () {
                 // Formats the y-axis labels for HH:MM:SS
@@ -219,6 +207,35 @@
           m = Math.floor(Number(d) % 3600 / 60),
           s = Math.floor(Number(d) % 3600 % 60);
       return (h > 0 ? h + ':' + (m < 10 ? '0' : '') : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function buildPlotLine() {
+      var goal = vm.currentUser.goals[vm.category.$id],
+          latestTry = vm.stats.items[vm.stats.items.length - 1].valueNumber,
+          goalLabel = 'Goal: ' + goal,
+          color = 'red',
+          plotLineConfig = {};
+
+      if (vm.category.goalType === 'least' && latestTry <= goal ||
+        vm.category.goalType === 'most' && latestTry >= goal) {
+        color = 'green';
+      }
+
+      if (vm.category.valueType === 'duration') {
+        goalLabel = 'Goal: ' + secondsToHms(goal);
+      }
+
+      plotLineConfig = {
+        value: goal,
+        color: color,
+        width: 2,
+        zIndex: 3,
+        label: {text: goalLabel},
+        dashStyle: 'shortdash',
+        id: 'goal'
+      };
+
+      return plotLineConfig;
     }
   }
 }());

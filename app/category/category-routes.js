@@ -13,8 +13,10 @@
         controller: 'CategoryCtrl',
         controllerAs: 'category',
         resolve: {
-          loggedIn: ['User', function (User) {
-            return User.signInRequired();
+          currentUser: ['User', function (User) {
+            return User.signInRequired().then(function () {
+              return User.getUser();
+            });
           }],
           activeCategory: ['Category', '$stateParams', function (Category, $stateParams) {
             return Category.getCategories().then(function (categories) {

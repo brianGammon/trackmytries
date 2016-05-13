@@ -58,3 +58,8 @@
 .total-tries {
   border-bottom: 0;
 }
+
+.goal-edit {
+  margin: 0;
+  height: 30px;
+}

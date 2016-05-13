@@ -1,0 +1,61 @@
+<md-dialog aria-label="Item Editor" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Set Goal</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="dialog.cancel()">
+        <ng-md-icon icon="close" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <form name="dialog.form" novalidate>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div layout="row" class="timepicker" ng-if="dialog.category.valueType === 'duration'">
+          <md-input-container>
+            <label>Hours</label>
+            <md-select ng-model="dialog.hours">
+              <md-option ng-repeat="h in dialog.getNumberList(24) track by $index" value="{{$index}}">
+                {{$index | padDigits}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container>
+            <label>Mins</label>
+            <md-select ng-model="dialog.mins">
+              <md-option ng-repeat="m in dialog.getNumberList(60) track by $index" value="{{$index}}">
+                {{$index | padDigits}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container>
+            <label>Secs</label>
+            <md-select ng-model="dialog.secs">
+              <md-option ng-repeat="s in dialog.getNumberList(60) track by $index" value="{{$index}}">
+                {{$index | padDigits}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+
+        <md-input-container class="md-block" ng-if="dialog.category.valueType === 'count'">
+          <label>Count</label>
+          <input required type="number" name="count" ng-model="dialog.goal"
+               min="0"/>
+
+          <div ng-messages="dialog.form.count.$error">
+            <div ng-message-exp="['required', 'min', 'number']">
+              Must be a number greater then zero.
+            </div>
+          </div>
+        </md-input-container>
+
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button class="md-raised md-primary" type="submit" ng-click="dialog.save()">
+        Save
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

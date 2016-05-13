@@ -109,6 +109,12 @@
       return Auth.$requireAuth();
     };
 
+    UserBase.setGoal = function (categoryId, goal) {
+      var usersRef = FirebaseRef.getUserProfilesRef();
+
+      return usersRef.child('goals').child(categoryId).set(goal);
+    };
+
     return UserBase;
 
     function updateUserProfile(authInfo) {
