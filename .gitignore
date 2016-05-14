@@ -31,3 +31,5 @@ logs
 pids
 *.pid
 *.seed
+
+env.json
