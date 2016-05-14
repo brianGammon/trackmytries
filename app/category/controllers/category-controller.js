@@ -210,30 +210,32 @@
     }
 
     function buildPlotLine() {
-      var goal = vm.currentUser.goals[vm.category.$id],
-          latestTry = vm.stats.items[vm.stats.items.length - 1].valueNumber,
-          goalLabel = 'Goal: ' + goal,
-          color = 'red',
+      var goal = vm.currentUser.goals ? vm.currentUser.goals[vm.category.$id] : null,
+          latestTry = vm.stats.items.length > 0 ? vm.stats.items[vm.stats.items.length - 1].valueNumber : null,
+          goalLabel = 'Your Goal: ' + goal,
+          color = 'grey',
           plotLineConfig = {};
 
-      if (vm.category.goalType === 'least' && latestTry <= goal ||
-        vm.category.goalType === 'most' && latestTry >= goal) {
-        color = 'green';
-      }
+      if (goal && latestTry) {
+        // if (vm.category.goalType === 'least' && latestTry <= goal ||
+        //   vm.category.goalType === 'most' && latestTry >= goal) {
+        //   color = 'green';
+        // }
 
-      if (vm.category.valueType === 'duration') {
-        goalLabel = 'Goal: ' + secondsToHms(goal);
-      }
+        if (vm.category.valueType === 'duration') {
+          goalLabel = 'Your Goal: ' + secondsToHms(goal);
+        }
 
-      plotLineConfig = {
-        value: goal,
-        color: color,
-        width: 2,
-        zIndex: 3,
-        label: {text: goalLabel},
-        dashStyle: 'shortdash',
-        id: 'goal'
-      };
+        plotLineConfig = {
+          value: goal,
+          color: color,
+          width: 2,
+          zIndex: 3,
+          label: {text: goalLabel},
+          dashStyle: 'shortdash',
+          id: 'goal'
+        };
+      }
 
       return plotLineConfig;
     }

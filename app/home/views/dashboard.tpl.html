@@ -1,10 +1,11 @@
 <div layout="column">
-  <md-toolbar>
+  <md-toolbar layout="row">
+    <div class="menu-spacer"></div>
     <h2 class="md-toolbar-tools"><span>{{db.currentUser.name}}'s Dashboard</span></h2>
   </md-toolbar>
-    <div layout="row" layout-wrap layout-xs="column">
-      <div flex-sm="50" flex-gt-sm="33" data-ng-repeat="category in db.categories">
-        <category-stats category="category" stats="db.stats[category.$id]" goal="db.currentUser.goals[category.$id]" view-all="true" add-fn="db.addNew(event, category)"></category-stats>
-      </div>
+  <div layout="row" layout-wrap layout-xs="column">
+    <div flex-sm="50" flex-gt-sm="33" data-ng-repeat="category in db.categories">
+      <category-stats category="category" stats="db.stats[category.$id]" goal="db.currentUser.goals[category.$id]" view-all="true" add-fn="db.addNew(event, category)"></category-stats>
     </div>
+  </div>
 </div>

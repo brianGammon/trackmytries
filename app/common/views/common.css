@@ -3,8 +3,8 @@ html, body {
   background: #E0E0E0;
 }
 
-h2.md-toolbar-tools {
-  margin-left: 50px;
+.menu-spacer {
+  width: 50px;
 }
 
 .body-wrapper {

@@ -20,7 +20,7 @@
           <strong>{{vm.stats.best[0].valueNumber || 0}}</strong>
         </div>
         <div flex="25" ng-if="vm.category.valueType === 'duration'">
-          <strong>{{vm.stats.best[0].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}</strong>
+          <strong>{{vm.stats.best[0].valueNumber * 1000 | date:'HH:mm:ss' : 'UTC' }}</strong>
         </div>
         <div flex="35"><strong>{{vm.stats.best[0].itemDateTime | date:'MM-dd-yyyy'}}</strong></div>
       </div>
@@ -30,7 +30,7 @@
           {{vm.stats.items[vm.stats.items.length - 1].valueNumber || 0}}
         </div>
         <div flex="25" ng-if="vm.category.valueType === 'duration'">
-          {{vm.stats.items[vm.stats.items.length - 1].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}
+          {{vm.stats.items[vm.stats.items.length - 1].valueNumber * 1000 | date:'HH:mm:ss' : 'UTC' }}
         </div>
         <div flex="35">{{vm.stats.items[vm.stats.items.length - 1].itemDateTime | date:'MM-dd-yyyy'}}</div>
       </div>
@@ -40,7 +40,7 @@
           {{vm.stats.items[0].valueNumber || 0}}
         </div>
         <div flex="25" ng-if="vm.category.valueType === 'duration'">
-          {{vm.stats.items[0].valueNumber * 1000 | date:'mm:ss' : 'UTC' }}
+          {{vm.stats.items[0].valueNumber * 1000 | date:'HH:mm:ss' : 'UTC' }}
         </div>
         <div flex="35">{{vm.stats.items[0].itemDateTime | date:'MM-dd-yyyy'}}</div>
       </div>
@@ -48,15 +48,18 @@
 
     <div class="stats-row"
       ng-class="{'goal-met': vm.category.goalType === 'least' && vm.stats.items[vm.stats.items.length - 1].valueNumber <= vm.goal ||
-        vm.category.goalType === 'most' && vm.stats.items[vm.stats.items.length - 1].valueNumber >= vm.goal}" 
+        vm.category.goalType === 'most' && vm.stats.items[vm.stats.items.length - 1].valueNumber >= vm.goal}"
       layout
       layout-align="start center">
       <div flex="40">Current Goal: </div>
-      <div flex="25" ng-if="vm.category.valueType === 'count'">
-        {{vm.goal || 'not set'}}
+      <div flex="25" ng-if="!vm.goal">
+        <em>not set</em>
       </div>
-      <div flex="25" ng-if="vm.category.valueType === 'duration'">
-        {{vm.goal * 1000 | date:'mm:ss' : 'UTC' || 'not set'}}
+      <div flex="25" ng-if="vm.category.valueType === 'count' && vm.goal">
+        {{vm.goal}}
+      </div>
+      <div flex="25" ng-if="vm.category.valueType === 'duration' && vm.goal">
+        {{vm.goal * 1000 | date:'HH:mm:ss' : 'UTC'}}
       </div>
       <md-button class="md-icon-button" ng-click="vm.editGoal($event)" aria-label="Edit Goal">
         <ng-md-icon icon="edit"></ng-md-icon>
