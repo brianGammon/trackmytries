@@ -83,7 +83,6 @@
     };
 
     UserBase.changePassword = function (credentials) {
-      console.log(credentials);
       return Auth.$changePassword({
         email: credentials.email,
         oldPassword: credentials.password,
