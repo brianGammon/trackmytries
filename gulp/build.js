@@ -206,7 +206,7 @@ module.exports = function (gulp, $, config) {
   });
 
   // copy optional favicon in app directory
-  gulp.task('favicon', ['clean'], function () {
+  gulp.task('favicon', ['clean', 'deleteTemplates'], function () {
     return gulp.src(config.appIconFiles)
       .pipe(gulp.dest(config.buildDir));
   });
@@ -226,6 +226,15 @@ module.exports = function (gulp, $, config) {
 
     return stream.done()
       .pipe(gulp.dest(config.buildTestDirectiveTemplatesDir));
+  });
+
+  // set the fb url to the right endpoint, if prod
+  gulp.task('firebaseUrl', ['deleteTemplates'], function () {
+    if (isProd) {
+      gulp.src([config.buildJs + 'app-*.js*'])
+        .pipe($.replace('https://trackmytries-dev.firebaseio.com', 'https://trackmytries.firebaseio.com'))
+        .pipe(gulp.dest(config.buildJs));
+    }
   });
 
   gulp.task('deleteTemplates', ['copyTemplates'], function (cb) {
@@ -253,5 +262,5 @@ module.exports = function (gulp, $, config) {
       });
   });
 
-  gulp.task('build', ['deleteTemplates', 'bowerAssets', 'images', 'favicon', 'fonts']);
+  gulp.task('build', ['deleteTemplates', 'bowerAssets', 'images', 'favicon', 'firebaseUrl', 'fonts']);
 };
