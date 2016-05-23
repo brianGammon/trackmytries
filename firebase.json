@@ -1,10 +1,13 @@
 {
-  "firebase": "trackmytries-dev",
-  "public": "build/app",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ],
-  "rules": "firebase/firebaseRules.json"
+  "database": {
+    "rules": "firebase/firebaseRules.json"
+  },
+  "hosting": {
+    "public": "build/app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
 }
