@@ -90,8 +90,8 @@
       });
     };
 
-    UserBase.facebookLogin = function () {
-      return Auth.$authWithOAuthPopup('facebook')
+    UserBase.socialLogin = function (provider) {
+      return Auth.$authWithOAuthPopup(provider)
         .then(updateUserProfile);
     };
 
@@ -134,10 +134,11 @@
           };
           break;
         case 'facebook':
-          userProfile.name = authInfo.facebook.displayName;
+        case 'google':
+          userProfile.name = authInfo[authInfo.provider].displayName;
           userProfile.providerData = {
-            profileImageUrl: authInfo.facebook.profileImageURL,
-            accessToken: authInfo.facebook.accessToken
+            profileImageUrl: authInfo[authInfo.provider].profileImageURL,
+            accessToken: authInfo[authInfo.provider].accessToken
           };
           break;
         default:

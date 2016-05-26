@@ -41,19 +41,14 @@
           <p>Don't have an account yet? <a data-ui-sref="signup">Sign up here</a></p>
         </div>
         <div flex></div>
-        <div layout="row">
-          <md-button href="" md-no-ink="md-no-ink">Forgot Password</md-button>
-          <md-button type="submit" ng-click="user.login()" class="md-raised md-primary">Login</md-button>
-        </div>
+        <md-button type="submit" ng-click="user.login()" class="md-raised md-primary">Login</md-button>
       </div>
+      <!-- <div layout="column" layout-gt-sm="row" layout-align="center center">
+        <div flex></div>
+        <md-button href="" md-no-ink="md-no-ink">Forgot Password</md-button>
+      </div> -->
     </form>
   </div>
 
-  <div ng-if="!user.currentUser" class="userForm md-whiteframe-z1" layout="column" layout-align="start center">
-    <p>Or, use your Facebook account</p>
-    <div flex></div>
-    <md-button type="button" class="md-fab md-mini md-primary" data-ng-click="user.facebookLogin()" aria-label="Facebook Sign In">
-      <ng-md-icon icon="facebook"></ng-md-icon>
-    </md-button>
-  </div>
+  <ng-include src="'user/views/social-login.tpl.html'"></ng-include>
 </div>

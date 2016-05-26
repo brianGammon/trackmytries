@@ -42,8 +42,8 @@
       }
     };
 
-    vm.facebookLogin = function () {
-      User.facebookLogin()
+    vm.socialLogin = function (provider) {
+      User.socialLogin(provider)
         .then(onSuccess)
         .catch(onError);
     };

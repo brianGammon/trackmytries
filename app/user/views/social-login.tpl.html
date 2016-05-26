@@ -1,0 +1,11 @@
+<div ng-if="!user.currentUser" class="userForm md-whiteframe-z1" layout="column" layout-align="start center">
+  <p>Or, use a social login provider</p>
+  <div layout="row">
+    <md-button type="button" class="md-fab md-mini md-primary" data-ng-click="user.socialLogin('facebook')" aria-label="Facebook Sign In">
+      <ng-md-icon icon="facebook"></ng-md-icon>
+    </md-button>
+    <md-button type="button" class="md-fab md-mini md-primary" data-ng-click="user.socialLogin('google')" aria-label="Google Sign In">
+      <ng-md-icon icon="google-plus"></ng-md-icon>
+    </md-button>
+  </div>
+</div>
