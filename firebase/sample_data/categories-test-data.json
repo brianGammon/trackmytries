@@ -4,27 +4,45 @@
     "description" : "Number of sit ups completed in 2 minutes",
     "goalType" : "most",
     "name" : "Sit Ups",
-    "valueType" : "count"
+    "valueType" : "count",
+    "perfLevelSource": {
+      "description": "Adapted from official US Navy PRT Standards",
+      "url": "http://www.navy-prt.com/files/6110.1J_-_Physical_Readiness_program.pdf",
+      "linkType": "PDF"
+    }
   },
   "pushups" : {
     ".priority" : "2",
     "description" : "Number of push ups completed in 2 minutes",
     "goalType" : "most",
     "name" : "Push Ups",
-    "valueType" : "count"
+    "valueType" : "count",
+    "perfLevelSource": {
+      "description": "Adapted from official US Navy PRT Standards",
+      "url": "http://www.navy-prt.com/files/6110.1J_-_Physical_Readiness_program.pdf",
+      "linkType": "PDF"
+    }
   },
   "pullups" : {
     ".priority" : "3",
     "description" : "Number of pull ups completed",
     "goalType" : "most",
     "name" : "Pull Ups",
-    "valueType" : "count"
+    "valueType" : "count",
+    "perfLevelSource": {
+      "description": "TrackMyTries defined (not official US Navy standards)"
+    }
   },
   "1point5milerun" : {
     ".priority" : "4",
     "description" : "Time in minutes and seconds (HH:MM:SS) to run 1.5 miles",
     "goalType" : "least",
     "name" : "1.5 Mile Run",
-    "valueType" : "duration"
+    "valueType" : "duration",
+    "perfLevelSource": {
+      "description": "Adapted from official US Navy PRT Standards",
+      "url": "http://www.navy-prt.com/files/6110.1J_-_Physical_Readiness_program.pdf",
+      "linkType": "PDF"
+    }
   }
 }

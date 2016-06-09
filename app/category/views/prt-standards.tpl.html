@@ -1,0 +1,67 @@
+<md-dialog class="prt-standards" aria-label="PRT Standards" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-title">
+        Performance Levels<sup>*</sup>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="dialog.cancel()">
+        <ng-md-icon icon="close" aria-label="Close dialog"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content layout="column" layout-padding>
+    <div class="no-bottom-pad">
+      {{dialog.category.name}}
+    </div>
+
+    <div class="no-bottom-pad" layout="row" layout-align="start center">
+      <div>
+        Settings: <span class="capitalize">{{dialog.gender}}</span>, {{dialog.ageRanges[dialog.ageRange]}}
+      </div>
+      <md-button class="md-icon-button" ng-click="dialog.navigate('profile')" aria-label="Edit Profile">
+        <ng-md-icon icon="settings"></ng-md-icon>
+      </md-button>
+    </div>
+
+    <div class="level" ng-class="'{{key}}'" layout="row" ng-repeat="(key, level) in dialog.levels">
+      <div flex="50">
+        {{level.displayName}}
+      </div>
+      <div flex></div>
+      <div flex ng-if="dialog.category.goalType === 'most'">
+        <span ng-if="dialog.category.valueType === 'count'">
+          {{level.min || '<' + (level.max + 1)}}
+        </span>
+        <span ng-if="dialog.category.valueType === 'duration'" && level.min>
+          {{level.min * 1000 | date:'mm:ss' : 'UTC' }}
+        </span>
+        <span ng-if="dialog.category.valueType === 'duration'" && !level.min>
+          <{{level.max * 1000 | date:'mm:ss' : 'UTC' }}
+        </span>
+      </div>
+      <div flex="30" ng-if="dialog.category.goalType === 'least'">
+        <span ng-if="dialog.category.valueType === 'count'">
+          {{level.max || level.min}}
+        </span>
+        <span ng-if="dialog.category.valueType === 'duration' && level.max">
+          {{level.max * 1000 | date:'mm:ss' : 'UTC' }}
+        </span>
+        <span ng-if="dialog.category.valueType === 'duration' && !level.max">
+          >{{(level.min - 1) * 1000 | date:'mm:ss' : 'UTC'}}
+        </span>
+      </div>
+    </div>
+    <div>
+      <span class="md-caption" ng-if="dialog.category.perfLevelSource">
+        <sup>*</sup>{{dialog.category.perfLevelSource.description}}
+        <a ng-if="dialog.category.perfLevelSource.url" ng-href="{{dialog.category.perfLevelSource.url}}" target="_blank">
+          {{dialog.category.perfLevelSource.linkType}}
+        </a>
+      </span>
+    </div>
+    <!-- <div>
+      <span ng-click="dialog.navigate('login')">View all Performance Levels</span>
+    </div> -->
+  </md-dialog-content>
+</md-dialog>

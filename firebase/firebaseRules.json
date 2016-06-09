@@ -1,5 +1,8 @@
 {
   "rules": {
+    "ageRange": {
+      ".read": true
+    },
     "categories": {
       ".read": true,
       "goalType": {
@@ -36,6 +39,9 @@
         ".read": "auth != null && auth.uid == $uid",
         ".write": "auth != null && auth.uid == $uid"
       }
+    },
+    "prtStandards": {
+      ".read": true
     }
   }
 }

@@ -8,6 +8,8 @@ var gulp = require('gulp'),
     usersSeedData = JSON.parse(fs.readFileSync(config.userData, 'utf8')),
     categoriesSeedData = JSON.parse(fs.readFileSync(config.categoryData, 'utf8')),
     itemsSeedData = JSON.parse(fs.readFileSync(config.itemData, 'utf8')),
+    ageRangeSeedData = JSON.parse(fs.readFileSync(config.ageRangeData, 'utf8')),
+    prtSeedData = JSON.parse(fs.readFileSync(config.prtData, 'utf8')),
     fbUrl = config.fbUrl,
     fbSecret = config.fbSecret,
     rootRef = new Firebase(fbUrl),
@@ -134,6 +136,26 @@ gulp.task('seedCategories', ['login', 'resetFirebase'], function (done) {
   });
 });
 
+gulp.task('seedAgeRange', ['login', 'resetFirebase'], function (done) {
+  rootRef.child('ageRange').set(ageRangeSeedData).then(function (error) {
+    if (error) {
+      done(error);
+    } else {
+      done();
+    }
+  });
+});
+
+gulp.task('seedPrtStandards', ['login', 'resetFirebase'], function (done) {
+  rootRef.child('prtStandards').set(prtSeedData).then(function (error) {
+    if (error) {
+      done(error);
+    } else {
+      done();
+    }
+  });
+});
+
 gulp.task('seedItems', ['login', 'seedUsers', 'seedCategories'], function (done) {
   var count = 0;
   itemsSeedData.forEach(function (item) {
@@ -188,4 +210,4 @@ gulp.task('logout', ['seedItems'], function () {
   console.log('all done');
 });
 
-gulp.task('seedData', ['seedItems', 'logout']);
+gulp.task('seedData', ['seedItems', 'seedAgeRange', 'seedPrtStandards', 'logout']);

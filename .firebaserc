@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "firebase-trackmytries-dev"
+    "default": "firebase-trackmytries-dev",
+    "prod": "prod-instance-name-here"
   }
 }

@@ -18,13 +18,13 @@
     </md-list-item>
     <md-list-item ng-if="!nav.currentUser" ui-sref="login">Login</md-list-item>
     <md-list-item ng-if="!nav.currentUser" ui-sref="signup">Sign Up</md-list-item>
-    <!-- <md-list-item ng-if="nav.currentUser && nav.currentUser.provider === 'password'" ui-sref="change-password">Profile</md-list-item> -->
+    <md-list-item ng-if="nav.currentUser" ui-sref="profile">Profile</md-list-item>
     <md-list-item ng-if="nav.currentUser && nav.currentUser.provider === 'password'" ui-sref="change-password">Change Password</md-list-item>
   </md-list>
   <md-divider ></md-divider>
   <md-list>
     <md-header class="md-no-sticky">Navigation</md-header>
-    <md-list-item ng-if="!nav.currentUser"ui-sref="home">Home</md-list-item>
+    <md-list-item ui-sref="home">Home</md-list-item>
     <div ng-if="nav.currentUser">
       <md-list-item ui-sref="dashboard">
         Dashboard

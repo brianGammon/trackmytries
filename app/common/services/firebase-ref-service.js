@@ -22,6 +22,12 @@
       },
       getCategoriesRef: function () {
         return FirebaseRoot.child('categories');
+      },
+      getAgeRangeRef: function () {
+        return FirebaseRoot.child('ageRange');
+      },
+      getPrtStandardsRef: function () {
+        return FirebaseRoot.child('prtStandards');
       }
     };
   }

@@ -12,10 +12,11 @@
     .module('user')
     .controller('UserCtrl', UserCtrl);
 
-  function UserCtrl(currentUser, User, $scope, $state, $mdToast) {
+  function UserCtrl(currentUser, User, PrtStandards, $scope, $state, $mdToast) {
     var vm = this;
 
     vm.currentUser = currentUser;
+    vm.ageRanges = PrtStandards.getAgeRanges();
 
     vm.login = function () {
       if (vm.loginForm.$valid) {
@@ -50,6 +51,12 @@
 
     vm.logout = function () {
       User.logout();
+    };
+
+    vm.saveProfile = function () {
+      User.saveProfile(currentUser)
+        .then(onSuccess)
+        .catch(onError);
     };
 
     function onSuccess() {

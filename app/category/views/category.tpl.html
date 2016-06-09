@@ -12,7 +12,7 @@
       <highchart flex ng-if="category.stats.items.length >= 2" config="category.chartConfig"></highchart>
     </md-content>
   </div>
-  <div flex-gt-xs="40">
+  <div flex-gt-xs="50" flex-gt-sm="35">
     <category-stats category="category.category" stats="category.stats" goal="category.currentUser.goals[category.category.$id]" view-all="false" add-fn="category.showItemDialog(event, category.category)"></category-stats>
   </div>
 </section>

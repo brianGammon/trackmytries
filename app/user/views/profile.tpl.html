@@ -1,0 +1,49 @@
+<md-toolbar layout="row">
+  <div class="menu-spacer"></div>
+  <h2 class="md-toolbar-tools"><span>Edit Profile</span></h2>
+</md-toolbar>
+<div layout="column" layout-margin layout-align="center center">
+  <div layout="column" layout-padding class="userForm md-whiteframe-z1">
+    <form name="user.loginForm" novalidate>
+      <div ng-if="user.currentUser.provider === 'password'">
+        <h3 class="md-subhead">Account Settings</h3>
+        <md-input-container class="md-block">
+          <label>Name</label>
+          <input required type="name" name="name" ng-model="user.currentUser.name"
+               minlength="2" maxlength="100"/>
+          <div ng-messages="user.loginForm.name.$error">
+            <div ng-message-exp="['required', 'minlength', 'maxlength']">
+              Name is a required field.
+            </div>
+          </div>
+        </md-input-container>
+      </div>
+
+      <h3 class="md-subhead">PRT Performance Settings</h3>
+      <div layout="row">
+        <md-input-container flex="33">
+          <label>Gender</label>
+          <md-select ng-model="user.currentUser.gender">
+            <md-option value="male">Male</md-option>
+            <md-option value="female">Female</md-option>
+          </md-select>
+        </md-input-container>
+
+        <md-input-container class="ageRangePicker" flex="33">
+          <label>Age Range</label>
+          <md-select ng-model="user.currentUser.ageRange">
+            <md-option ng-repeat="(key, range) in user.ageRanges track by $index" value="{{key}}">
+              {{range}}
+            </md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+
+      <div layout="row" layout-align="end center">
+        <md-button type="submit" ng-click="user.saveProfile()" class="md-raised md-primary">Save</md-button>
+      </div>
+
+
+    </form>
+  </div>
+</div>

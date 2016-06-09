@@ -1,9 +1,15 @@
 <md-card class="cat-card">
   <md-card-header>
-    <md-card-header-text>
-      <span class="md-title">{{vm.category.name}}</span>
-      <span class="md-subhead">{{vm.category.description}}</span>
-    </md-card-header-text>
+    <div class="card-header" layout="row" layout-align="space-between center">
+      <md-card-header-text>
+        <span class="md-title"><strong>{{vm.category.name}}</strong></span>
+        <span class="md-subhead">{{vm.category.description}}</span>
+      </md-card-header-text>
+
+      <md-button class="md-icon-button new-try" ng-click="vm.addFn({event: $event}, {category: vm.category})" aria-label="Add New {{vm.category.name}} Try">
+        <ng-md-icon icon="add" size="40"></ng-md-icon>
+      </md-button>
+    </div>
   </md-card-header>
 
   <md-card-content>
@@ -24,6 +30,7 @@
         </div>
         <div flex="35"><strong>{{vm.stats.best[0].itemDateTime | date:'MM-dd-yyyy'}}</strong></div>
       </div>
+
       <div class="stats-row" layout="row" layout-align="start center">
         <div flex="40">Latest Try:</div>
         <div flex="25" ng-if="vm.category.valueType === 'count'">
@@ -34,6 +41,7 @@
         </div>
         <div flex="35">{{vm.stats.items[vm.stats.items.length - 1].itemDateTime | date:'MM-dd-yyyy'}}</div>
       </div>
+
       <div class="stats-row" layout="row" layout-align="start center">
         <div flex="40">First Try:</div>
         <div flex="25" ng-if="vm.category.valueType === 'count'">
@@ -44,6 +52,16 @@
         </div>
         <div flex="35">{{vm.stats.items[0].itemDateTime | date:'MM-dd-yyyy'}}</div>
       </div>
+
+      <div class="stats-row level" ng-class="vm.getPrtLevel()" layout="row" layout-align="start center">
+        <div flex="45">Performance Level:</div>
+        <div flex="40">
+          {{vm.prt.levels[vm.getPrtLevel()].displayName}}
+        </div>
+        <md-button class="md-icon-button" ng-click="vm.showPrtStandards($event)" aria-label="PRT Chart">
+          <ng-md-icon icon="assignment"></ng-md-icon>
+        </md-button>
+      </div>
     </div>
 
     <div class="stats-row"
@@ -51,27 +69,28 @@
         vm.category.goalType === 'most' && vm.stats.items[vm.stats.items.length - 1].valueNumber >= vm.goal}"
       layout
       layout-align="start center">
-      <div flex="40">Current Goal: </div>
-      <div flex="25" ng-if="!vm.goal">
+      <div flex="45">Current Goal: </div>
+      <div flex="40" ng-if="!vm.goal">
         <em>not set</em>
       </div>
-      <div flex="25" ng-if="vm.category.valueType === 'count' && vm.goal">
+      <div flex="40" ng-if="vm.category.valueType === 'count' && vm.goal">
         {{vm.goal}}
       </div>
-      <div flex="25" ng-if="vm.category.valueType === 'duration' && vm.goal">
+      <div flex="40" ng-if="vm.category.valueType === 'duration' && vm.goal">
         {{vm.goal * 1000 | date:'HH:mm:ss' : 'UTC'}}
       </div>
       <md-button class="md-icon-button" ng-click="vm.editGoal($event)" aria-label="Edit Goal">
         <ng-md-icon icon="edit"></ng-md-icon>
       </md-button>
     </div>
-    <div class="stats-row total-tries" layout layout-align="start center">
+
+    <!-- <div class="stats-row total-tries" layout layout-align="start center">
       <div flex="40">Total Tries:</div>
-      <div flex="25">{{vm.stats.items.length}}</div>
+      <div flex="35">{{vm.stats.items.length}}</div>
       <md-button class="md-icon-button" ng-click="vm.addFn({event: $event}, {category: vm.category})" aria-label="Add New {{vm.category.name}} Try">
         <ng-md-icon icon="add"></ng-md-icon>
       </md-button>
-    </div>
+    </div> -->
   </md-card-content>
 
   <md-card-actions layout="row" layout-align="center">

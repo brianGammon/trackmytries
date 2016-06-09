@@ -41,7 +41,8 @@
 }
 
 .goal-met {
-  background-color: rgba(76, 175, 80, 1);
+  /*background-color: rgba(76, 175, 80, 1);*/
+  background-color: rgba(34,139,34,.5);
 }
 
 .notries {
@@ -62,4 +63,65 @@
 .goal-edit {
   margin: 0;
   height: 30px;
+}
+
+.md-icon-button.new-try {
+  width: 45px;
+  height: 45px;
+}
+
+.md-icon-button.new-try > ng-md-icon {
+  fill: white;
+}
+
+.card-header {
+  width: 100%
+}
+
+/* PRT Standards*/
+.prt-standards {
+  min-width: 300px;
+  max-width: 315px;
+}
+
+.no-bottom-pad {
+  padding-bottom: 0;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.level.failure {
+  /*background-color: crimson;*/
+  background-color: rgba(255,0,0,.5);
+}
+
+.level.satisfactory {
+  /*background-color: orange;*/
+  background-color: rgba(255,165,0,.5);
+}
+
+.level.good {
+  /*background-color: yellow;*/
+  background-color: rgba(255,255,0,.5);
+}
+
+.level.excellent {
+  /*background-color: forestgreen;*/
+  background-color: rgba(34,139,34,.5);
+}
+
+.level.outstanding {
+  /*background-color: royalblue;*/
+  background-color: rgba(65,105,225,.5);
+}
+
+.level.maximum {
+  /*background-color: darkorchid;*/
+  background-color: rgba(153,50,204,.5);
+}
+
+.level.unknown {
+  background-color: lightgrey;
 }

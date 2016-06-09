@@ -50,6 +50,22 @@
             return 'Change Password';
           }
         }
+      })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'user/views/profile.tpl.html',
+        controller: 'UserCtrl',
+        controllerAs: 'user',
+        resolve: {
+          currentUser: ['User', function (User) {
+            return User.signInRequired().then(function () {
+              return User.getUser();
+            });
+          }],
+          $title: function () {
+            return 'Profile';
+          }
+        }
       });
   }
 }());

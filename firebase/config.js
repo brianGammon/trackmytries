@@ -13,7 +13,9 @@ nconf.argv().env().file({file: 'env.json'})
     // Use env.json to load data from other files (like for Prod)
     CATEGORYDATA: './sample_data/categories-test-data.json',
     USERDATA: './sample_data/users-test-data.json',
-    ITEMDATA: './sample_data/items-test-data.json'
+    ITEMDATA: './sample_data/items-test-data.json',
+    AGERANGEDATA: './sample_data/ageRange-test-data.json',
+    PRTDATA: './sample_data/prt-standards-data.json'
   });
 
 module.exports = {
@@ -21,5 +23,7 @@ module.exports = {
   fbSecret: nconf.get('FBSECRET'),
   categoryData: nconf.get('CATEGORYDATA'),
   userData: nconf.get('USERDATA'),
-  itemData: nconf.get('ITEMDATA')
+  itemData: nconf.get('ITEMDATA'),
+  ageRangeData: nconf.get('AGERANGEDATA'),
+  prtData: nconf.get('PRTDATA')
 };

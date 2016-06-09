@@ -1,0 +1,3493 @@
+{
+  "female" : {
+    "0to19" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 750,
+            "min" : 691
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 901
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 810,
+            "min" : 751
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 569,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 690,
+            "min" : 570
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 900,
+            "min" : 811
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 6,
+            "min" : 5
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 4,
+            "min" : 3
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 10
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 9,
+            "min" : 7
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 2,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 46,
+            "min" : 42
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 18
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 41,
+            "min" : 24
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 51
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 50,
+            "min" : 47
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 23,
+            "min" : 19
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 101,
+            "min" : 90
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 49
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 89,
+            "min" : 62
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 109
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 108,
+            "min" : 102
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 61,
+            "min" : 50
+          }
+        }
+      }
+    },
+    "20to24" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 795,
+            "min" : 691
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 931
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 855,
+            "min" : 796
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 587,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 690,
+            "min" : 588
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 930,
+            "min" : 856
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 6,
+            "min" : 5
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 4,
+            "min" : 3
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 10
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 9,
+            "min" : 7
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 2,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 43,
+            "min" : 39
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 15
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 38,
+            "min" : 21
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 48
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 47,
+            "min" : 44
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 20,
+            "min" : 16
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 97,
+            "min" : 87
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 45
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 86,
+            "min" : 58
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 105
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 104,
+            "min" : 98
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 57,
+            "min" : 46
+          }
+        }
+      }
+    },
+    "25to29" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max": 803,
+            "min" : 706
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 969
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 893,
+            "min" : 804
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 617,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 705,
+            "min" : 618
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 968,
+            "min" : 894
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 6,
+            "min" : 5
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 4,
+            "min" : 3
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 10
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 9,
+            "min" : 7
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 2,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 42,
+            "min" : 37
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 12
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 36,
+            "min" : 19
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 46
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 45,
+            "min" : 43
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 18,
+            "min" : 13
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 94,
+            "min" : 84
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 42
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 83,
+            "min" : 54
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 101
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 100,
+            "min" : 95
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 53,
+            "min" : 43
+          }
+        }
+      }
+    },
+    "30to34" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 810,
+            "min" : 721
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1006
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 930,
+            "min" : 811
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 646,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 720,
+            "min" : 647
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1005,
+            "min" : 931
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 6,
+            "min" : 5
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 4,
+            "min" : 3
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 10
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 9,
+            "min" : 7
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 2,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 40,
+            "min" : 35
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 10
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 34,
+            "min" : 17
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 44
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 43,
+            "min" : 41
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 16,
+            "min" : 11
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 91,
+            "min" : 81
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 39
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 80,
+            "min" : 51
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 98
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 97,
+            "min" : 92
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 50,
+            "min" : 40
+          }
+        }
+      }
+    },
+    "35to39" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 825,
+            "min" : 729
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1021
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 953,
+            "min" : 826
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 651,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 728,
+            "min" : 652
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1020,
+            "min" : 954
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 3,
+            "min" : 3
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 2,
+            "min" : 2
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 5
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 4,
+            "min" : 4
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 38,
+            "min" : 34
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 8
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 33,
+            "min" : 14
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 43
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 42,
+            "min" : 39
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 13,
+            "min" : 9
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 87,
+            "min" : 78
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 36
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 77,
+            "min" : 47
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 95
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 94,
+            "min" : 88
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 46,
+            "min" : 37
+          }
+        }
+      }
+    },
+    "40to44" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 840,
+            "min" : 736
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1036
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 975,
+            "min" : 841
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 656,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 735,
+            "min" : 657
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1035,
+            "min" : 976
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 3,
+            "min" : 3
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 2,
+            "min" : 2
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 5
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 4,
+            "min" : 4
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 36,
+            "min" : 32
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 6
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 31,
+            "min" : 12
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 41
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 40,
+            "min" : 37
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 11,
+            "min" : 7
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 84,
+            "min" : 76
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 34
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 75,
+            "min" : 44
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 92
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 91,
+            "min" : 85
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 43,
+            "min" : 35
+          }
+        }
+      }
+    },
+    "45to49" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 848,
+            "min" : 751
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1044
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 990,
+            "min" : 849
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 658,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 750,
+            "min" : 659
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1043,
+            "min" : 991
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 3,
+            "min" : 3
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 2,
+            "min" : 2
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 5
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 4,
+            "min" : 4
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 34,
+            "min" : 30
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 4
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 29,
+            "min" : 11
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 40
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 39,
+            "min" : 35
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 10,
+            "min" : 5
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 80,
+            "min" : 73
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 30
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 72,
+            "min" : 40
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 88
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 87,
+            "min" : 81
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 39,
+            "min" : 31
+          }
+        }
+      }
+    },
+    "50to54" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 855,
+            "min" : 746
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1051
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 1005,
+            "min" : 856
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 660,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 745,
+            "min" : 661
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1050,
+            "min" : 1006
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 3,
+            "min" : 3
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 2,
+            "min" : 2
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 5
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 4,
+            "min" : 4
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 32,
+            "min" : 28
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 1
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 27,
+            "min" : 10
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 38
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 37,
+            "min" : 33
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 9,
+            "min" : 2
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 77,
+            "min" : 71
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 28
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 70,
+            "min" : 37
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 85
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 84,
+            "min" : 78
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 36,
+            "min" : 29
+          }
+        }
+      }
+    },
+    "55to59" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 920,
+            "min" : 838
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1115
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 1068,
+            "min" : 921
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 743,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 837,
+            "min" : 744
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1114,
+            "min" : 1069
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 3,
+            "min" : 3
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 2,
+            "min" : 2
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 5
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 4,
+            "min" : 4
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 25,
+            "min" : 20
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 1
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 19,
+            "min" : 6
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 30
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 29,
+            "min" : 26
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 5,
+            "min" : 2
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 73,
+            "min" : 62
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 25
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 61,
+            "min" : 36
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 81
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 80,
+            "min" : 74
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 35,
+            "min" : 26
+          }
+        }
+      }
+    },
+    "60to64" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 985,
+            "min" : 909
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1184
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 1131,
+            "min" : 986
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 814,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 908,
+            "min" : 815
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1183,
+            "min" : 1132
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 3,
+            "min" : 3
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 2,
+            "min" : 2
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 5
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 4,
+            "min" : 4
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 21,
+            "min" : 16
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 1
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 15,
+            "min" : 5
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 26
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 25,
+            "min" : 22
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 4,
+            "min" : 2
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 69,
+            "min" : 56
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 19
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 55,
+            "min" : 26
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 75
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 74,
+            "min" : 70
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 25,
+            "min" : 20
+          }
+        }
+      }
+    },
+    "65to150" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 1050,
+            "min" : 980
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1253
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 1194,
+            "min" : 1051
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 885,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 979,
+            "min" : 886
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1252,
+            "min" : 1195
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 3,
+            "min" : 3
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0,
+            "min" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 2,
+            "min" : 2
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 5
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 4,
+            "min" : 4
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 17,
+            "min" : 12
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 11,
+            "min" : 4
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 22
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 21,
+            "min" : 18
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 3,
+            "min" : 1
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 59,
+            "min" : 44
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 9
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 43,
+            "min" : 20
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 65
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 64,
+            "min" : 60
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 19,
+            "min" : 10
+          }
+        }
+      }
+    }
+  },
+  "male" : {
+    "0to19" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 585,
+            "min" : 541
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 751
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 660,
+            "min" : 586
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 495,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 540,
+            "min" : 496
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 750,
+            "min" : 661
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 16,
+            "min" : 15
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 4
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 14,
+            "min" : 10
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 20
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 19,
+            "min" : 17
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 9,
+            "min" : 5
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 85,
+            "min" : 76
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 41
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 75,
+            "min" : 51
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 92
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 91,
+            "min" : 86
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 50,
+            "min" : 42
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 101,
+            "min" : 90
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 49
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 89,
+            "min" : 62
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 109
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 108,
+            "min" : 102
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 61,
+            "min" : 50
+          }
+        }
+      }
+    },
+    "20to24" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 630,
+            "min" : 556
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 811
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 720,
+            "min" : 631
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 510,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 555,
+            "min" : 511
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 810,
+            "min" : 721
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 16,
+            "min" : 15
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 4
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 14,
+            "min" : 10
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 20
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 19,
+            "min" : 17
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 9,
+            "min" : 5
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 80,
+            "min" : 71
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 36
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 70,
+            "min" : 47
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 87
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 86,
+            "min" : 81
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 46,
+            "min" : 37
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 97,
+            "min" : 87
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 45
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 86,
+            "min" : 58
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 105
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 104,
+            "min" : 98
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 57,
+            "min" : 46
+          }
+        }
+      }
+    },
+    "25to29" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max": 652,
+            "min" : 579
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 841
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 773,
+            "min" : 653
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 535,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 578,
+            "min" : 536
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 840,
+            "min" : 774
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 16,
+            "min" : 15
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 4
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 14,
+            "min" : 10
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 20
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 19,
+            "min" : 17
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 9,
+            "min" : 5
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 76,
+            "min" : 67
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 33
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 66,
+            "min" : 44
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 84
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 83,
+            "min" : 77
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 43,
+            "min" : 34
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 94,
+            "min" : 84
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 42
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 83,
+            "min" : 54
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 101
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 100,
+            "min" : 95
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 53,
+            "min" : 43
+          }
+        }
+      }
+    },
+    "30to34" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 675,
+            "min" : 601
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 871
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 825,
+            "min" : 676
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 560,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 600,
+            "min" : 561
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 870,
+            "min" : 826
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 16,
+            "min" : 15
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 4
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 14,
+            "min" : 10
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 20
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 19,
+            "min" : 17
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 9,
+            "min" : 5
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 73,
+            "min" : 64
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 30
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 63,
+            "min" : 41
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 80
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 79,
+            "min" : 74
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 40,
+            "min" : 31
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 91,
+            "min" : 81
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 39
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 80,
+            "min" : 51
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 98
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 97,
+            "min" : 92
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 50,
+            "min" : 40
+          }
+        }
+      }
+    },
+    "35to39" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 683,
+            "min" : 609
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 901
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 848,
+            "min" : 684
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 565,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 608,
+            "min" : 566
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 900,
+            "min" : 849
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 14,
+            "min" : 9
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 2
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 8,
+            "min" : 7
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 18
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 17,
+            "min" : 15
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 6,
+            "min" : 3
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 69,
+            "min" : 60
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 26
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 59,
+            "min" : 37
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 76
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 75,
+            "min" : 70
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 36,
+            "min" : 27
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 87,
+            "min" : 78
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 36
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 77,
+            "min" : 47
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 95
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 94,
+            "min" : 88
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 46,
+            "min" : 37
+          }
+        }
+      }
+    },
+    "40to44" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 705,
+            "min" : 616
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 931
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 870,
+            "min" : 706
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 570,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 615,
+            "min" : 571
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 930,
+            "min" : 871
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 14,
+            "min" : 9
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 2
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 8,
+            "min" : 7
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 18
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 17,
+            "min" : 15
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 6,
+            "min" : 3
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 66,
+            "min" : 56
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 23
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 55,
+            "min" : 34
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 72
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 71,
+            "min" : 67
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 33,
+            "min" : 24
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 84,
+            "min" : 76
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 34
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 75,
+            "min" : 44
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 92
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 91,
+            "min" : 85
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 43,
+            "min" : 35
+          }
+        }
+      }
+    },
+    "45to49" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 728,
+            "min" : 631
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 969
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 893,
+            "min" : 729
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 573,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 630,
+            "min" : 574
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 968,
+            "min" : 894
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 14,
+            "min" : 9
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 2
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 8,
+            "min" : 7
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 18
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 17,
+            "min" : 15
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 6,
+            "min" : 3
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 62,
+            "min" : 52
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 20
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 51,
+            "min" : 32
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 68
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 67,
+            "min" : 63
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 31,
+            "min" : 21
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 80,
+            "min" : 73
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 30
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 72,
+            "min" : 40
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 88
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 87,
+            "min" : 81
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 39,
+            "min" : 31
+          }
+        }
+      }
+    },
+    "50to54" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 750,
+            "min" : 646
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1006
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 915,
+            "min" : 751
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 575,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 645,
+            "min" : 576
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1005,
+            "min" : 916
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 10,
+            "min" : 8
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 1
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 7,
+            "min" : 5
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 15
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 14,
+            "min" : 11
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 4,
+            "min" : 2
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 58,
+            "min" : 49
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 18
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 48,
+            "min" : 30
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 64
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 63,
+            "min" : 59
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 29,
+            "min" : 19
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 77,
+            "min" : 71
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 28
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 70,
+            "min" : 37
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 85
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 84,
+            "min" : 78
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 36,
+            "min" : 29
+          }
+        }
+      }
+    },
+    "55to59" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 792,
+            "min" : 686
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1040
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 975,
+            "min" : 793
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 642,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 685,
+            "min" : 643
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1039,
+            "min" : 976
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 10,
+            "min" : 8
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 1
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 7,
+            "min" : 5
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 15
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 14,
+            "min" : 11
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 4,
+            "min" : 2
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 55,
+            "min" : 46
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 9
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 45,
+            "min" : 16
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 60
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 59,
+            "min" : 56
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 15,
+            "min" : 10
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 73,
+            "min" : 62
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 25
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 61,
+            "min" : 36
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 81
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 80,
+            "min" : 74
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 35,
+            "min" : 26
+          }
+        }
+      }
+    },
+    "60to64" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 833,
+            "min" : 725
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1133
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 1067,
+            "min" : 834
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 681,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 724,
+            "min" : 682
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1132,
+            "min" : 1068
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 7,
+            "min" : 6
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 5,
+            "min" : 3
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 10
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 9,
+            "min" : 8
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 2,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 51,
+            "min" : 44
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 7
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 43,
+            "min" : 14
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 57
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 56,
+            "min" : 52
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 13,
+            "min" : 8
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 69,
+            "min" : 56
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 19
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 55,
+            "min" : 26
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 75
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 74,
+            "min" : 70
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 25,
+            "min" : 20
+          }
+        }
+      }
+    },
+    "65to150" : {
+      "1point5milerun" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 874,
+            "min" : 764
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "min" : 1236
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 1093,
+            "min" : 875
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 701,
+            "min" : 0
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 763,
+            "min" : 702
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 1235,
+            "min" : 1094
+          }
+        }
+      },
+      "pullups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 7,
+            "min" : 6
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 0
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 5,
+            "min" : 3
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 100,
+            "min" : 10
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 9,
+            "min" : 8
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 2,
+            "min" : 1
+          }
+        }
+      },
+      "pushups" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 43,
+            "min" : 36
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 3
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 35,
+            "min" : 10
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 48
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 47,
+            "min" : 44
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 9,
+            "min" : 4
+          }
+        }
+      },
+      "situps" : {
+        "levels" : {
+          "excellent" : {
+            ".priority" : "2",
+            "displayName" : "Excellent",
+            "max" : 59,
+            "min" : 44
+          },
+          "failure" : {
+            ".priority" : "5",
+            "displayName" : "Probationary",
+            "max" : 9
+          },
+          "good" : {
+            ".priority" : "3",
+            "displayName" : "Good",
+            "max" : 43,
+            "min" : 20
+          },
+          "maximum" : {
+            ".priority" : "0",
+            "displayName" : "Maximum",
+            "max" : 200,
+            "min" : 65
+          },
+          "outstanding" : {
+            ".priority" : "1",
+            "displayName" : "Outstanding",
+            "max" : 64,
+            "min" : 60
+          },
+          "satisfactory" : {
+            ".priority" : "4",
+            "displayName" : "Satisfactory",
+            "max" : 19,
+            "min" : 10
+          }
+        }
+      }
+    }
+  }
+}

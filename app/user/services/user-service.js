@@ -114,6 +114,10 @@
       return usersRef.child('goals').child(categoryId).set(goal);
     };
 
+    UserBase.saveProfile = function (currentUser) {
+      return currentUser.$save();
+    };
+
     return UserBase;
 
     function updateUserProfile(authInfo) {
