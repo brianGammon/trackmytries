@@ -2,10 +2,14 @@
   <div class="fill-screen" style="background-image: url(images/pushups.jpg)" resize>
     <div layout="column" flex="85" flex-gt-sm="67" class="title-block">
       <h1 class="title md-display-3" ><ng-md-icon class="logo-wht" icon="trending_up" size="56"></ng-md-icon> TrackMyTries</h1>
-      <p class="md-title">Record each of your "Tries" on the PRT (Physical Readiness Test) to track your fitness</p>
-      <!-- <p class="md-title">
-        Track <em>anything</em> you want by creating your own categories, too!
-      </p> -->
+      <p class="md-title">Record each of your "tries" on the PRT (Physical Readiness Test) to track your fitness</p>
+      <div layout="column" layout-align="space-around center" layout-gt-xs="row">
+        <div class="md-button titlebar">Sit Ups</div>
+        <div class="md-button titlebar">Push Ups</div>
+        <div class="md-button titlebar">Pull Ups</div>
+        <div class="md-button titlebar">Bar Hang</div>
+        <div class="md-button titlebar">1.5 Mile Run</div>
+      </div>
       <div layout="row" layout-margin>
         <span flex></span>
         <div layout ng-if="!home.currentUser">
@@ -19,85 +23,11 @@
       </div>
     </div>
     <div class="down-button">
-        <md-button scroll-to="categories" aria-label="Scroll Down">
+        <md-button scroll-to="stats" aria-label="Scroll Down">
           <ng-md-icon icon="keyboard_arrow_down" size="56"></ng-md-icon>
         </md-button>
     </div>
   </div>
-</section>
-
-<section id="categories" class="content-section" layout="column">
-  <div layout="row">
-    <ng-md-icon class="logo-blk" icon="trending_up" size="44"></ng-md-icon>
-  </div>
-  <div layout="row" layout-xs="column">
-    <div layout="column" layout-align="start center" layout-padding flex>
-      <div>
-        <h2>
-          Physical Readiness Test
-        </h2>
-      </div>
-      <div>
-        <p>
-          4 built-in categories for tracking your PRT exercises:
-        </p>
-      </div>
-      <div layout="row">
-        <div layout="row" layout-sm="column" layout-align-sm="center start">
-          <div>
-            <ng-md-icon icon="check_box"></ng-md-icon> Push Ups
-          </div>
-          <div>
-            <ng-md-icon icon="check_box"></ng-md-icon> Sit Ups
-          </div>
-        </div>
-        <div layout="row" layout-sm="column" layout-align-sm="center start">
-          <div>
-            <ng-md-icon icon="check_box"></ng-md-icon> Pull Ups
-          </div>
-          <div>
-            <ng-md-icon icon="check_box"></ng-md-icon> 1.5 Mile Run
-          </div>
-        </div>
-      </div>
-    </div>
-    <div layout="column" layout-align="start center" layout-padding flex>
-      <div>
-        <h2>
-          Other (Planned) Features
-        </h2>
-      </div>
-      <div>
-        <p>
-          <ng-md-icon icon="check_box_outline_blank"></ng-md-icon> Set a personal goal for each category
-        </p>
-        <p>
-          <ng-md-icon icon="check_box_outline_blank"></ng-md-icon> See how you compare to US Navy PRT guidelines
-        </p>
-        <p>
-          <ng-md-icon icon="check_box_outline_blank"></ng-md-icon> Add your own categories
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-    <div class="fill-screen fixed-attachment" style="background-image: url(images/pullups-crop.jpg)" resize></div>
-</section>
-
-<section layout="column" layout-gt-xs="row" id="chart" class="content-section">
-  <div layout="column" layout-align="center center" layout-padding flex-gt-xs="40">
-    <h2>Visualize Your Progress</h2>
-    <p>Record all of your tries to chart your results. Set a goal for each category and see where you stand.</p>
-  </div>
-  <div flex-gt-xs="60">
-    <highchart id="demoChart" config="home.chartConfig"></highchart>
-  </div>
-</section>
-
-<section>
-  <div class="fill-screen fixed-attachment" style="background-image: url(images/situps2-crop.jpg)" resize></div>
 </section>
 
 <section id="stats" class="content-section" layout="row" layout-xs="column">
@@ -132,16 +62,16 @@
           <div flex="25">20</div>
           <div flex="35">08-04-2013</div>
         </div>
-        <div class="stats-row goal-met" layout layout-align="start center">
-          <div flex="40">Current Goal: </div>
-          <div flex="20">65</div>
-        </div>
-        <div class="stats-row" layout layout-align="start center">
-          <div flex="40">Total Tries:</div>
-          <div flex="25">17</div>
+        <div class="stats-row level good" layout="row" layout-align="start center">
+          <div flex="45">Performance Level:</div>
+          <div flex="40">Good</div>
           <md-button class="md-icon-button" aria-label="Dummy Button">
-            <ng-md-icon icon="add"></ng-md-icon>
+            <ng-md-icon icon="assignment"></ng-md-icon>
           </md-button>
+        </div>
+        <div class="stats-row goal-met" layout layout-align="start center">
+          <div flex="45">Current Goal: </div>
+          <div flex="40">65</div>
         </div>
       </md-card-content>
       <md-card-actions layout="row" layout-align="center">
@@ -149,6 +79,103 @@
           <ng-md-icon icon="trending_up"></ng-md-icon> View History
         </md-button>
       </md-card-actions>
+    </md-card>
+  </div>
+</section>
+
+<section>
+    <div class="fill-screen fixed-attachment" style="background-image: url(images/pullups-crop.jpg)" resize></div>
+</section>
+
+<section layout="column" layout-gt-xs="row" id="chart" class="content-section">
+  <div layout="column" layout-align="center center" layout-padding flex-gt-xs="40">
+    <h2>Visualize Your Progress</h2>
+    <p>Record all of your tries to chart your results. Set a goal for each category and see where you stand.</p>
+  </div>
+  <div flex-gt-xs="60">
+    <highchart id="demoChart" config="home.chartConfig"></highchart>
+  </div>
+</section>
+
+<section>
+  <div class="fill-screen fixed-attachment" style="background-image: url(images/situps2-crop.jpg)" resize></div>
+</section>
+
+<section id="standards" class="content-section" layout="row" layout-xs="column">
+  <div layout="column" layout-align="center center" layout-padding flex-gt-xs="50">
+    <h2>Check Your Performance Level</h2>
+    <p>See how you measure up to official US Navy PRT standards, based on gender and age range</p>
+  </div>
+
+  <div layout="column" layout-align="center center" flex-gt-xs="50">
+    <md-card class="prt-standards" aria-label="PRT Standards" ng-cloak>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2 class="md-title">Performance Levels<sup>*</sup></h2>
+          <span flex></span>
+          <md-button class="md-icon-button">
+            <ng-md-icon icon="close" aria-label="Close dialog"></md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+
+      <md-card-content layout="column" layout-padding>
+        <div class="no-bottom-pad">Sit Ups</div>
+
+        <div class="no-bottom-pad" layout="row" layout-align="start center">
+          <div>
+            Settings: <span class="capitalize">male</span>, 30 to 34
+          </div>
+          <md-button class="md-icon-button" aria-label="Dummy Button">
+            <ng-md-icon icon="settings"></ng-md-icon>
+          </md-button>
+        </div>
+
+        <div class="level maximum" layout="row">
+          <div flex="50">Maximum</div>
+          <div flex></div>
+          <div flex><span>80</span></div>
+        </div>
+
+        <div class="level outstanding" layout="row">
+          <div flex="50">Outstanding</div>
+          <div flex></div>
+          <div flex><span>74</span></div>
+        </div>
+
+        <div class="level excellent" layout="row">
+          <div flex="50">Excellent</div>
+          <div flex></div>
+          <div flex><span>64</span></div>
+        </div>
+
+        <div class="level good" layout="row">
+          <div flex="50">Good</div>
+          <div flex></div>
+          <div flex><span>41</span></div>
+        </div>
+
+        <div class="level satisfactory" layout="row">
+          <div flex="50">Satisfactory</div>
+          <div flex></div>
+          <div flex><span>31</span></div>
+        </div>
+
+        <div class="level failure" layout="row">
+          <div flex="50">Probationary</div>
+          <div flex></div>
+          <div flex><span>&lt;31</span></div>
+        </div>
+
+        <div>
+          <span class="md-caption">
+            <sup>*</sup>Adapted from official US Navy PRT Standards
+            <a href="http://www.navy-prt.com/files/6110.1J_-_Physical_Readiness_program.pdf" target="_blank">
+              PDF
+            </a>
+          </span>
+        </div>
+      </md-card-content>
     </md-card>
   </div>
 </section>

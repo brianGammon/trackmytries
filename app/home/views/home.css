@@ -8,6 +8,10 @@
     min-height: 300px;
 }
 
+.md-button.titlebar {
+  margin: 0 8px;
+}
+
 .title-row .title-block {
     position: absolute;
     padding: 20px;
