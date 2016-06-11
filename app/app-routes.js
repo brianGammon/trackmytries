@@ -20,6 +20,8 @@
           event.preventDefault();
           if (error === 'AUTH_REQUIRED') {
             $state.go('login');
+          } else {
+            throw error;
           }
         });
       $rootScope.$on('$destroy', onStateChangeError);

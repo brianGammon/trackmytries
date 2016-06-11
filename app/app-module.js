@@ -23,5 +23,15 @@
     .config(function ($mdThemingProvider) {
       $mdThemingProvider.theme('success-toast');
       $mdThemingProvider.theme('error-toast');
+    })
+    .run(function ($window) {
+      // Initialize Firebase
+      var config = {
+        apiKey: 'AIzaSyCch4JEtLeR20wrno_6IZzyUXfU317x0dM',
+        authDomain: 'trackmytries-dev.firebaseapp.com',
+        databaseURL: 'https://trackmytries-dev.firebaseio.com'
+      };
+
+      $window.firebase.initializeApp(config);
     });
 }());

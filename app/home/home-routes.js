@@ -14,7 +14,9 @@
         controllerAs: 'home',
         resolve: {
           currentUser: ['User', function (User) {
-            return User.getUser();
+            return User.waitForSignIn().then(function () {
+              return User.getUser();
+            });
           }],
           $title: function () {
             return 'Home';

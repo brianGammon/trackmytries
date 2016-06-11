@@ -12,7 +12,7 @@
     .module('user')
     .factory('Auth', Auth);
 
-  function Auth($firebaseAuth, FirebaseRoot) {
-    return $firebaseAuth(FirebaseRoot);
+  function Auth($firebaseAuth) {
+    return $firebaseAuth();
   }
 }());

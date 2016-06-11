@@ -12,7 +12,7 @@
     .module('common')
     .factory('FirebaseRoot', firebaseRoot);
 
-  function firebaseRoot(FIREBASEURL, $window) {
-    return new $window.Firebase(FIREBASEURL);
+  function firebaseRoot($window) {
+    return $window.firebase.database().ref();
   }
 }());

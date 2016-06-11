@@ -232,7 +232,8 @@ module.exports = function (gulp, $, config) {
   gulp.task('firebaseUrl', ['deleteTemplates'], function () {
     if (isProd) {
       gulp.src([config.buildJs + 'app-*.js*'])
-        .pipe($.replace('https://trackmytries-dev.firebaseio.com', 'https://trackmytries.firebaseio.com'))
+        .pipe($.replace('trackmytries-dev', 'trackmytries'))
+        .pipe($.replace('AIzaSyCch4JEtLeR20wrno_6IZzyUXfU317x0dM', 'AIzaSyDgT_YAnJVkJTtuiWtSmzPxmgMTK-0sP60'))
         .pipe(gulp.dest(config.buildJs));
     }
   });

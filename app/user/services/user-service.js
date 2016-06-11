@@ -12,7 +12,7 @@
     .module('user')
     .factory('User', User);
 
-  function User($q, Auth, FirebaseRef, $firebaseObject, CacheFactory) {
+  function User($q, Auth, FirebaseRef, $firebaseObject, CacheFactory, $window) {
     var UserBase = {},
         callbacks = [],
         userCache;
@@ -23,8 +23,8 @@
 
     userCache = CacheFactory.get('userCache');
 
-    Auth.$onAuth(function (authData) {
-      if (!authData) {
+    Auth.$onAuthStateChanged(function (user) {
+      if (!user) {
         reset();
       }
       angular.forEach(callbacks, function (callback) {
@@ -34,11 +34,11 @@
 
     UserBase.getUser = function () {
       var deferred = $q.defer(),
-          authInfo = Auth.$getAuth(),
+          user = Auth.$getAuth(),
           userRef,
           userPromise;
 
-      if (!authInfo) {
+      if (!user) {
         console.log('No user is logged in');
         deferred.resolve(null);
         return deferred.promise;
@@ -58,46 +58,43 @@
     };
 
     UserBase.login = function (credentials) {
-      return Auth.$authWithPassword({
-        email: credentials.email,
-        password: credentials.password
-      }).then(updateUserProfile);
+      return Auth.$signInWithEmailAndPassword(credentials.email, credentials.password)
+        .then(updateUserProfile);
     };
 
     UserBase.signUp = function (credentials) {
       // Create the firebase account
-      return Auth.$createUser({
-        email: credentials.email,
-        password: credentials.password
-      }).then(function () {
-        // If that worked, sign in
-        return Auth.$authWithPassword({
-          email: credentials.email,
-          password: credentials.password
-        }).then(function (authInfo) {
-          // If sign in was ok, then create a user profile
-          authInfo.name = credentials.name;
-          return updateUserProfile(authInfo);
+      return Auth.$createUserWithEmailAndPassword(credentials.email, credentials.password)
+        .then(function () {
+          // If that worked, sign in
+          return Auth.$signInWithEmailAndPassword(credentials.email, credentials.password)
+            .then(function (user) {
+              // If sign in was ok, then create a user profile
+              return updateUserProfile(user, {displayName: credentials.name});
+            });
         });
-      });
     };
 
     UserBase.changePassword = function (credentials) {
-      return Auth.$changePassword({
-        email: credentials.email,
-        oldPassword: credentials.password,
-        newPassword: credentials.newPassword
+      var currentUser = Auth.$getAuth(),
+          // This should be part of the Angularfire API at some point
+          credential = $window.firebase.auth.EmailAuthProvider.credential(credentials.email, credentials.password);
+
+      return currentUser.reauthenticate(credential).then(function () {
+        return Auth.$updatePassword(credentials.newPassword);
       });
     };
 
     UserBase.socialLogin = function (provider) {
-      return Auth.$authWithOAuthPopup(provider)
-        .then(updateUserProfile);
+      return Auth.$signInWithPopup(provider)
+        .then(function (result) {
+          return updateUserProfile(result.user, {accessToken: result.credential.accessToken});
+        });
     };
 
     UserBase.logout = function () {
       reset();
-      Auth.$unauth();
+      Auth.$signOut();
     };
 
     UserBase.onSignInChange = function (callback) {
@@ -105,7 +102,11 @@
     };
 
     UserBase.signInRequired = function () {
-      return Auth.$requireAuth();
+      return Auth.$requireSignIn();
+    };
+
+    UserBase.waitForSignIn = function () {
+      return Auth.$waitForSignIn();
     };
 
     UserBase.setGoal = function (categoryId, goal) {
@@ -120,33 +121,34 @@
 
     return UserBase;
 
-    function updateUserProfile(authInfo) {
-      var usersRef = FirebaseRef.getUserProfilesRef(),
+    function updateUserProfile(user, options) {
+      var providerId = user.providerData[0].providerId,
+          usersRef = FirebaseRef.getUserProfilesRef(),
           userProfile = {
-            provider: authInfo.provider
+            provider: providerId
           };
 
-      switch (authInfo.provider) {
+      switch (providerId) {
         case 'password':
-          if (authInfo.name) {
-            userProfile.name = authInfo.name;
+          if (options && options.displayName) {
+            userProfile.name = options.displayName;
           }
-          userProfile.email = authInfo.password.email;
+          userProfile.email = user.email;
           userProfile.providerData = {
-            isTemporaryPassword: authInfo.password.isTemporaryPassword,
-            profileImageUrl: authInfo.password.profileImageURL
+            emailVerified: user.emailVerified,
+            profileImageUrl: user.providerData[0].photoURL
           };
           break;
-        case 'facebook':
-        case 'google':
-          userProfile.name = authInfo[authInfo.provider].displayName;
+        case 'facebook.com':
+        case 'google.com':
+          userProfile.name = user.providerData[0].displayName;
           userProfile.providerData = {
-            profileImageUrl: authInfo[authInfo.provider].profileImageURL,
-            accessToken: authInfo[authInfo.provider].accessToken
+            profileImageUrl: user.providerData[0].photoURL,
+            accessToken: options.accessToken
           };
           break;
         default:
-          throw new Error('Unsupported auth provider: ' + authInfo.provider);
+          throw new Error('Unsupported auth provider: ' + user.provider);
       }
       return usersRef.update(userProfile);
     }
