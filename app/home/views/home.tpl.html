@@ -3,14 +3,18 @@
     <div layout="column" flex="85" flex-gt-sm="67" class="title-block">
       <h1 class="title md-display-3" ><ng-md-icon class="logo-wht" icon="trending_up" size="56"></ng-md-icon> TrackMyTries</h1>
       <p class="md-title">Record each of your "tries" on the PRT (Physical Readiness Test) to track your fitness</p>
-      <div layout="column" layout-align="space-around center" layout-gt-xs="row">
-        <div class="md-button titlebar">Sit Ups</div>
-        <div class="md-button titlebar">Push Ups</div>
-        <div class="md-button titlebar">Pull Ups</div>
-        <div class="md-button titlebar">Bar Hang</div>
-        <div class="md-button titlebar">1.5 Mile Run</div>
+      <div layout="column" layout-align="center center" layout-gt-xs="row">
+        <div layout="row" layout-align="space-around center">
+          <div class="md-button titlebar">Sit Ups</div>
+          <div class="md-button titlebar">Push Ups</div>
+          <div class="md-button titlebar">Pull Ups</div>
+        </div>
+        <div layout="row" layout-align="space-around center">
+          <div class="md-button titlebar">Bar Hang</div>
+          <div class="md-button titlebar">1.5 Mile Run</div>
+        </div>
       </div>
-      <div layout="row" layout-margin>
+      <div layout="row" layout-margin layout-align="center end">
         <span flex></span>
         <div layout ng-if="!home.currentUser">
           <md-button data-ui-sref="signup">Sign Up</md-button>

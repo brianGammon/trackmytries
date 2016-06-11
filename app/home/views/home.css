@@ -72,6 +72,10 @@ p.md-title {
   .down-button {
     bottom: -10px;
   }
+
+  .title-block {
+    max-height: 310px;
+  }
 }
 
 .fixed-attachment {
