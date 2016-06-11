@@ -65,13 +65,9 @@
     UserBase.signUp = function (credentials) {
       // Create the firebase account
       return Auth.$createUserWithEmailAndPassword(credentials.email, credentials.password)
-        .then(function () {
-          // If that worked, sign in
-          return Auth.$signInWithEmailAndPassword(credentials.email, credentials.password)
-            .then(function (user) {
-              // If sign in was ok, then create a user profile
-              return updateUserProfile(user, {displayName: credentials.name});
-            });
+        .then(function (user) {
+          // If sign in was ok, then create a user profile
+          return updateUserProfile(user, {displayName: credentials.name});
         });
     };
 
