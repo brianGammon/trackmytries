@@ -1,27 +1,27 @@
 [
   {
-    "user": "b@trackmytries.com",
+    "user": "demo@example.com",
     "category": "pullups",
     "itemDateTime": "2015-05-13T05:00:00Z",
     "valueNumber": 3,
     "notes": "Did 3.5"
   },
   {
-    "user": "b@trackmytries.com",
+    "user": "demo@example.com",
     "category": "pushups",
     "itemDateTime": "2012-08-06T05:00:00Z",
     "valueNumber": 20,
     "notes": ""
   },
   {
-    "user": "b@trackmytries.com",
+    "user": "demo@example.com",
     "category": "situps",
     "itemDateTime": "2012-08-06T05:00:00Z",
     "valueNumber": 4,
     "notes": ""
   },
   {
-    "user": "r@trackmytries.com",
+    "user": "sample@example.com",
     "category": "pullups",
     "itemDateTime": "2015-05-13T05:00:00Z",
     "valueNumber": 3,

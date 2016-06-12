@@ -10,8 +10,8 @@ describe('Root reference tests: ', function () {
   describe('signed in: ', function () {
     before(function (done) {
       rootRef.authWithPassword({
-        email: 'b@trackmytries.com',
-        password: 'Password1!'
+        email: 'demo@example.com',
+        password: 'tester'
       }, function (err) {
         if (err) {
           done(err);

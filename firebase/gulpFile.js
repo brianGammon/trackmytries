@@ -42,7 +42,7 @@ gulp.task('resetUsers', ['login'], function (done) {
     console.log('Doing... ', user);
     rootRef.removeUser({
       email: user.email,
-      password: 'Password1!'
+      password: 'tester'
     }, function (error) {
       if (error) {
         switch (error.code) {
@@ -85,7 +85,7 @@ gulp.task('seedUsers', ['login', 'resetFirebase'], function (done) {
   usersSeedData.forEach(function (user) {
     rootRef.createUser({
       email: user.email,
-      password: 'Password1!'
+      password: 'tester'
     }, function (error, userData) {
       if (error) {
         switch (error.code) {

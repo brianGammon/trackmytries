@@ -12,8 +12,8 @@ describe('userItems validation tests', function () {
 
   before(function (done) {
     ref.authWithPassword({
-      email: 'b@trackmytries.com',
-      password: 'Password1!'
+      email: 'demo@example.com',
+      password: 'tester'
     }, function (err, authData) {
       if (err) {
         done(err);

@@ -12,8 +12,8 @@ module.exports = function (rootRef, refUnderTest) {
       // Login and store the uid of the 'other' user for the tests in this suite
       // This uid will change everytime the seed-data tasks are run
       rootRef.authWithPassword({
-        email: 'r@trackmytries.com',
-        password: 'Password1!'
+        email: 'sample@example.com',
+        password: 'tester'
       }, function (err, authData) {
         if (err) {
           done(err);
@@ -35,8 +35,8 @@ module.exports = function (rootRef, refUnderTest) {
 
       before(function (done) {
         rootRef.authWithPassword({
-          email: 'b@trackmytries.com',
-          password: 'Password1!'
+          email: 'demo@example.com',
+          password: 'tester'
         }, function (err, authData) {
           if (err) {
             done(err);

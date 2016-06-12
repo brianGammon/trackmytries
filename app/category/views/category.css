@@ -36,6 +36,10 @@
   color: white;
 }
 
+.large-size {
+  font-size: 150%;
+}
+
 .goal-unmet {
   background-color: rgba(255, 64, 129, 1);
 }
@@ -46,7 +50,7 @@
 }
 
 .notries {
-  height: 103px;
+  height: 144px;
   padding: 20px;
 }
 

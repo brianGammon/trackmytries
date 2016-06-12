@@ -1,10 +1,10 @@
 [
   {
-    "name": "Brian Tester",
-    "email": "b@trackmytries.com"
+    "name": "Demo User",
+    "email": "demo@example.com"
   },
   {
-    "name": "Rob Tester",
-    "email": "r@trackmytries.com"
+    "name": "Sample User",
+    "email": "sample@example.com"
   }
 ]

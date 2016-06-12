@@ -39,11 +39,11 @@
           ng-model="user.credentials.password"
           name="password"
           type="password"
-          ng-pattern="/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/"
+          minlength="6"
           required/>
         <div ng-messages="user.loginForm.password.$error">
-          <div ng-message-exp="['required','pattern']">
-            Password must be 8 or more characters long, and contain at least 1 uppercase and 1 number.
+          <div ng-message-exp="['required', 'minlength']">
+            Password must be at least 6 characters.
           </div>
         </div>
       </md-input-container>

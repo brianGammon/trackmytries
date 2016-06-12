@@ -15,7 +15,7 @@
     "eslint-path-formatter": "^0.1.1",
     "eslint-plugin-angular": "^0.15.0",
     "find-up": "^1.0.0",
-    "firebase": "^3.0.4",
+    "firebase": "^2.4.2",
     "glob": "^5.0.1",
     "gulp": "^3.8.7",
     "gulp-angular-filesort": "^1.0.4",
