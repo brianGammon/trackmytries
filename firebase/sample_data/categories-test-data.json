@@ -44,5 +44,12 @@
       "url": "http://www.navy-prt.com/files/6110.1J_-_Physical_Readiness_program.pdf",
       "linkType": "PDF"
     }
+  },
+  "barhang" : {
+    ".priority" : "5",
+    "description" : "Hang time from pull up bar in minutes and seconds (HH:MM:SS)",
+    "goalType" : "most",
+    "name" : "Bar Hang",
+    "valueType" : "duration"
   }
 }

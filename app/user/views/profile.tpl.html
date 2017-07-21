@@ -39,6 +39,29 @@
         </md-input-container>
       </div>
 
+      <h3 class="md-subhead">Hidden Categories</h3>
+      <div layout="row">
+        <div>
+          <!--
+            In IE, we cannot apply flex directly to <fieldset>
+            @see https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers
+          -->
+          <fieldset class="standard" >
+            <div layout="row" layout-wrap flex>
+              <div flex="50" ng-repeat="category in user.categories">
+                <!--<md-checkbox ng-checked="!user.currentUser.hideOnDashboard[category.$id]"
+                  ng-click="user.currentUser.hideOnDashboard[category.$id] = !user.currentUser.hideOnDashboard[category.$id]">
+                  {{ category.name }}
+                </md-checkbox>-->
+                <md-switch class="md-primary" aria-label="Switch" ng-model="user.currentUser.hideOnDashboard[category.$id]">
+                  {{category.name}}
+                </md-switch>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
       <div layout="row" layout-align="end center">
         <md-button type="submit" ng-click="user.saveProfile()" class="md-raised md-primary">Save</md-button>
       </div>

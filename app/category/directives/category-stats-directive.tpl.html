@@ -55,23 +55,23 @@
 
       <div class="stats-row level" ng-class="vm.getPrtLevel()" layout="row" layout-align="start center">
         <div flex="45">Performance Level:</div>
-        <div flex="40">
+        <div flex="40" ng-if="vm.getPrtLevel() !== 'unknown'">
           {{vm.prt.levels[vm.getPrtLevel()].displayName}}
         </div>
-        <md-button class="md-icon-button" ng-click="vm.showPrtStandards($event)" aria-label="PRT Chart">
+        <md-button ng-if="vm.getPrtLevel() !== 'unknown'" class="md-icon-button" ng-click="vm.showPrtStandards($event)" aria-label="PRT Chart">
           <ng-md-icon icon="assignment"></ng-md-icon>
         </md-button>
+        <div ng-if="vm.getPrtLevel() === 'unknown'">
+          <em>N/A</em>
+        </div>
       </div>
     </div>
 
-    <div class="stats-row"
-      ng-class="{'goal-met': vm.category.goalType === 'least' && vm.stats.items[vm.stats.items.length - 1].valueNumber <= vm.goal ||
-        vm.category.goalType === 'most' && vm.stats.items[vm.stats.items.length - 1].valueNumber >= vm.goal}"
-      layout
-      layout-align="start center">
+    <div class="stats-row" ng-class="{'goal-met': vm.category.goalType === 'least' && vm.stats.items[vm.stats.items.length - 1].valueNumber <= vm.goal ||
+        vm.category.goalType === 'most' && vm.stats.items[vm.stats.items.length - 1].valueNumber >= vm.goal}" layout layout-align="start center">
       <div flex="45">Current Goal: </div>
       <div flex="40" ng-if="!vm.goal">
-        <em>not set</em>
+        <em>No Goal Set</em>
       </div>
       <div flex="40" ng-if="vm.category.valueType === 'count' && vm.goal">
         {{vm.goal}}

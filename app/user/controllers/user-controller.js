@@ -12,11 +12,15 @@
     .module('user')
     .controller('UserCtrl', UserCtrl);
 
-  function UserCtrl(currentUser, User, PrtStandards, $scope, $state, $mdToast) {
+  function UserCtrl(currentUser, User, PrtStandards, $scope, $state, $mdToast, Category) {
     var vm = this;
 
     vm.currentUser = currentUser;
     vm.ageRanges = PrtStandards.getAgeRanges();
+
+    Category.getCategories().then(function (categories) {
+      vm.categories = categories;
+    });
 
     vm.login = function () {
       if (vm.loginForm.$valid) {

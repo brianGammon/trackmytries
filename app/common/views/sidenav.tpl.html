@@ -29,7 +29,7 @@
       <md-list-item ui-sref="dashboard">
         Dashboard
       </md-list-item>
-      <md-list-item ng-repeat="category in nav.categories" ui-sref="category({id: category.$id})">
+      <md-list-item ng-repeat="category in nav.categories" ui-sref="category({id: category.$id})" ng-if="!nav.currentUser.hideOnDashboard[category.$id]">
         <div class="md-list-item-text">
           <p>{{category.name}}</p>
         </div>
